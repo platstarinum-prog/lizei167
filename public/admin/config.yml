@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: platstarinum-prog/lizei167
+  name: git-gateway
   branch: main
 
 site_url: https://steady-mochi-34b640.netlify.app
