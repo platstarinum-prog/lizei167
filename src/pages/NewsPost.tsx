@@ -30,9 +30,10 @@ export default function NewsPost({ id, onBack }: Props) {
           const match = lines[i].match(/^(\w+):\s*(.+)/);
           if (match) meta[match[1]] = match[2].replace(/['"]/g, '');
         }
+        const dateStr = meta.date;
         setPost({
           title: meta.title || 'Без назви',
-          date: meta.date ? new Date(meta.date).toLocaleDateString('uk-UA', { day: 'numeric', month: 'long', year: 'numeric' }) : '',
+          date: dateStr ? new Date(dateStr).toLocaleDateString('uk-UA', { day: 'numeric', month: 'long', year: 'numeric' }) : '',
           body: lines.slice(bodyStart).join('\n').trim(),
         });
       } catch (e) {
