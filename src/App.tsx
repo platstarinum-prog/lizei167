@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Education from './pages/Education';
 import News from './pages/News';
+import NewsPost from './pages/NewsPost';
 import Reviews from './pages/Reviews';
 import Contacts from './pages/Contacts';
 
@@ -13,6 +14,7 @@ export type Page = 'home' | 'about' | 'education' | 'news' | 'reviews' | 'contac
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openNewsId, setOpenNewsId] = useState<string | null>(null);
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -29,16 +31,23 @@ function App() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentPage]);
+  }, [currentPage, openNewsId]);
 
-  const navigate = (page: Page) => setCurrentPage(page);
+  const navigate = (page: Page) => {
+    setOpenNewsId(null);
+    setCurrentPage(page);
+  };
+
+  const openNews = (id: string) => setOpenNewsId(id);
+  const closeNews = () => setOpenNewsId(null);
 
   const renderPage = () => {
+    if (openNewsId) return <NewsPost id={openNewsId} onBack={closeNews} />;
     switch (currentPage) {
       case 'home': return <Home navigate={navigate} />;
       case 'about': return <About />;
       case 'education': return <Education />;
-      case 'news': return <News />;
+      case 'news': return <News onOpen={openNews} />;
       case 'reviews': return <Reviews />;
       case 'contacts': return <Contacts />;
       default: return <Home navigate={navigate} />;
