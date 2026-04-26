@@ -1,8 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: platstarinum-prog/lizei167
   branch: main
 
-site_url: https://lizei167.netlify.app
+site_url: https://steady-mochi-34b640.netlify.app
 media_folder: "public/images"
 public_folder: "/images"
 
