@@ -15,8 +15,9 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    if (window.location.hash.includes('invite_token')) {
-      window.location.href = '/admin/#' + window.location.hash.split('#')[1];
+    const hash = window.location.hash;
+    if (hash.includes('invite_token') || hash.includes('recovery_token')) {
+      window.location.href = '/admin/#' + hash.split('#')[1];
     }
   }, []);
 
