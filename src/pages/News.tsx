@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Calendar, Tag, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 
 interface NewsItem {
   id: string;
@@ -8,27 +8,11 @@ interface NewsItem {
   body: string;
 }
 
-function parseMarkdown(content: string): NewsItem[] {
-  const files = content.split('---FILE---').filter(Boolean);
-  return files.map((file, i) => {
-    const lines = file.trim().split('\n');
-    const meta: Record<string, string> = {};
-    let bodyStart = 0;
-    for (let j = 0; j < lines.length; j++) {
-      if (lines[j].startsWith('---') && j > 0) { bodyStart = j + 1; break; }
-      const match = lines[j].match(/^(\w+):\s*(.+)/);
-      if (match) meta[match[1]] = match[2];
-    }
-    return {
-      id: String(i),
-      title: meta.title || 'Без назви',
-      date: meta.date ? new Date(meta.date).toLocaleDateString('uk-UA', { day: 'numeric', month: 'long', year: 'numeric' }) : '',
-      body: lines.slice(bodyStart).join('\n').trim(),
-    };
-  });
+interface Props {
+  onOpen: (id: string) => void;
 }
 
-export default function News() {
+export default function News({ onOpen }: Props) {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -97,14 +81,23 @@ export default function News() {
           {!loading && news.length === 0 && <p className="text-center text-gray-400">Новин поки немає</p>}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {news.map((item) => (
-              <div key={item.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
+              <div
+                key={item.id}
+                className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow flex flex-col cursor-pointer"
+                onClick={() => onOpen(item.id)}
+              >
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center gap-2 text-gray-400 text-xs mb-3">
                     <Calendar className="w-3.5 h-3.5" />
                     {item.date}
                   </div>
                   <h3 className="font-bold text-gray-900 text-lg mb-3 leading-snug">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed flex-1">{item.body.slice(0, 150)}{item.body.length > 150 ? '...' : ''}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed flex-1">
+                    {item.body.slice(0, 150)}{item.body.length > 150 ? '...' : ''}
+                  </p>
+                  <button className="flex items-center gap-1.5 text-red-600 font-semibold text-sm mt-4 hover:gap-2.5 transition-all">
+                    Читати далі <ArrowRight className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
             ))}
