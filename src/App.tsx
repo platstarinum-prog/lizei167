@@ -15,6 +15,12 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    if (window.location.hash.includes('invite_token')) {
+      window.location.href = '/admin/#' + window.location.hash.split('#')[1];
+    }
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 40);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
