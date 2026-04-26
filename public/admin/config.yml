@@ -1,7 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: platstarinum-prog/lizei167
   branch: main
 
+site_url: https://lizei167.netlify.app
 media_folder: "public/images"
 public_folder: "/images"
 
@@ -10,6 +12,8 @@ collections:
     label: "Новости"
     folder: "content/news"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
       - { label: "Текст", name: "body", widget: "markdown" }
