@@ -1,6 +1,6 @@
-
 import { useEffect, useState } from 'react';
 import { ArrowLeft, Calendar } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 interface Props {
   id: string;
@@ -57,7 +57,21 @@ export default function NewsPost({ id, onBack }: Props) {
               {post.date}
             </div>
             <h1 className="text-3xl font-extrabold text-gray-900 mb-6 leading-snug">{post.title}</h1>
-            <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed whitespace-pre-wrap">{post.body}</div>
+            <div className="prose prose-gray max-w-none">
+              <ReactMarkdown
+                components={{
+                  img: ({ src, alt }) => (
+                    <img
+                      src={src}
+                      alt={alt}
+                      className="w-full rounded-xl my-4 object-cover"
+                    />
+                  ),
+                }}
+              >
+                {post.body}
+              </ReactMarkdown>
+            </div>
           </article>
         )}
       </div>
