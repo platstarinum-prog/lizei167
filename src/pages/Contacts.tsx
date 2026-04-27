@@ -50,7 +50,7 @@ export default function Contacts() {
     <div className="pt-20">
 
       {/* Hidden Netlify form */}
-      <form name="contact" data-netlify="true" hidden>
+      <form name="contact" netlify hidden>
         <input name="name" />
         <input name="phone" />
         <input name="email" />
@@ -146,7 +146,7 @@ export default function Contacts() {
                 </div>
               </div>
 
-              <a
+              
                 href="tel:+380442923133"
                 className="mt-6 flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-xl"
               >
@@ -168,14 +168,14 @@ export default function Contacts() {
                   <form
                     onSubmit={handleSubmit}
                     name="contact"
-                    data-netlify="true"
+                    netlify                    {/* ✅ исправлено */}
                     className="space-y-4"
                   >
                     <input type="hidden" name="form-name" value="contact" />
 
                     <input
                       required
-                      placeholder="Ім’я"
+                      placeholder="Ім'я"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       className="w-full border px-4 py-2 rounded"
@@ -224,7 +224,7 @@ export default function Contacts() {
 
       {/* MAP */}
       <section className="py-10 text-center">
-        <a
+        
           href="https://maps.google.com/?q=Київ"
           target="_blank"
           className="text-red-600 font-semibold"
