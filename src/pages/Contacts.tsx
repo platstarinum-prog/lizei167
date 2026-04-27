@@ -41,6 +41,15 @@ export default function Contacts() {
 
   return (
     <div className="pt-20">
+      {/* Hidden form for Netlify Forms detection at build time */}
+      <form name="contact" data-netlify="true" hidden>
+        <input name="name" />
+        <input name="phone" />
+        <input name="email" />
+        <input name="subject" />
+        <textarea name="message" />
+      </form>
+
       {/* Hero */}
       <section className="relative py-20 bg-gray-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -127,8 +136,7 @@ export default function Contacts() {
                 </div>
               </div>
 
-              {/* Call button */}
-              <a
+              
                 href="tel:+380442923133"
                 className="mt-6 flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-xl transition-colors shadow-md hover:shadow-lg"
               >
@@ -270,7 +278,7 @@ export default function Contacts() {
             />
           </div>
           <div className="mt-4 text-center">
-            <a
+            
               href="https://maps.google.com/?q=просп.+Соборності,+12В,+Київ"
               target="_blank"
               rel="noopener noreferrer"
