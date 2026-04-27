@@ -41,7 +41,8 @@ export default function Contacts() {
 
   return (
     <div className="pt-20">
-      {/* Hidden form for Netlify Forms detection at build time */}
+
+      {/* Hidden form for Netlify Forms detection */}
       <form name="contact" data-netlify="true" hidden>
         <input name="name" />
         <input name="phone" />
@@ -82,6 +83,7 @@ export default function Contacts() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12">
+
             {/* Left: info */}
             <div className="lg:col-span-2">
               <h2 className="text-2xl font-extrabold text-gray-900 mb-6">Наші контакти</h2>
@@ -254,6 +256,7 @@ export default function Contacts() {
                 )}
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -290,6 +293,7 @@ export default function Contacts() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
