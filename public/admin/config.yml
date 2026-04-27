@@ -1,11 +1,9 @@
 backend:
   name: git-gateway
   branch: main
-
-site_url: https://steady-mochi-34b640.netlify.app
+site_url: https://darling-puppy-34b186.netlify.app
 media_folder: "public/images"
 public_folder: "/images"
-
 collections:
   - name: "news"
     label: "Новости"
