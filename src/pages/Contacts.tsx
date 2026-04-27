@@ -50,7 +50,7 @@ export default function Contacts() {
     <div className="pt-20">
 
       {/* Hidden Netlify form */}
-      <form name="contact" netlify hidden>
+      <form name="contact" data-netlify="true" hidden>
         <input name="name" />
         <input name="phone" />
         <input name="email" />
@@ -168,7 +168,7 @@ export default function Contacts() {
                   <form
                     onSubmit={handleSubmit}
                     name="contact"
-                    netlify                    {/* ✅ исправлено */}
+                    data-netlify="true"
                     className="space-y-4"
                   >
                     <input type="hidden" name="form-name" value="contact" />
