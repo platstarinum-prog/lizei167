@@ -97,7 +97,10 @@ export default function Home({ navigate }: HomeProps) {
                 onClick={() => navigate('contacts')}
                 className="flex items-center gap-2 bg-white/10 text-white px-7 py-3.5 rounded-xl border border-white/20"
               >
-        
+           Контакти
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
 
             <div className="flex items-center gap-2 mt-8">
               {[1,2,3,4,5].map(i => (
