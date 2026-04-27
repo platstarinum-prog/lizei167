@@ -98,6 +98,7 @@ export default function Contacts() {
               <h2 className="text-2xl font-extrabold text-gray-900 mb-6">Наші контакти</h2>
 
               <div className="space-y-5">
+                {/* blocks unchanged */}
                 <div className="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
                   <div className="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center">
                     <MapPin className="w-5 h-5" />
@@ -146,7 +147,8 @@ export default function Contacts() {
                 </div>
               </div>
 
-              
+              {/* FIXED BUTTON */}
+              <a
                 href="tel:+380442923133"
                 className="mt-6 flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-xl"
               >
@@ -224,9 +226,10 @@ export default function Contacts() {
 
       {/* MAP */}
       <section className="py-10 text-center">
-        
+        <a
           href="https://maps.google.com/?q=Київ"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-red-600 font-semibold"
         >
           Відкрити в Google Maps
