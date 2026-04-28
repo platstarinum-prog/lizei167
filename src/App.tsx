@@ -8,8 +8,9 @@ import News from './pages/News';
 import NewsPost from './pages/NewsPost';
 import Reviews from './pages/Reviews';
 import Contacts from './pages/Contacts';
+import Openup from './pages/openup';
 
-export type Page = 'home' | 'about' | 'education' | 'news' | 'reviews' | 'contacts';
+export type Page = 'home' | 'about' | 'education' | 'news' | 'reviews' | 'contacts' | 'openup';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -50,6 +51,7 @@ function App() {
       case 'news': return <News onOpen={openNews} />;
       case 'reviews': return <Reviews />;
       case 'contacts': return <Contacts />;
+      case 'openup': return <Openup />;
       default: return <Home navigate={navigate} />;
     }
   };
