@@ -14,6 +14,7 @@ const navLinks: { label: string; page: Page }[] = [
   { label: 'Навчання', page: 'education' },
   { label: 'Новини', page: 'news' },
   { label: 'Відгуки', page: 'reviews' },
+  { label: 'Відкритість', page: 'openup' },
   { label: 'Контакти', page: 'contacts' },
 ];
 
@@ -75,7 +76,7 @@ export default function Header({ currentPage, navigate, isScrolled }: HeaderProp
 
           {/* Phone + Mobile toggle */}
           <div className="flex items-center gap-3">
-            <a
+            
               href="tel:+380442923133"
               className="hidden sm:flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors shadow-sm"
             >
@@ -110,7 +111,7 @@ export default function Header({ currentPage, navigate, isScrolled }: HeaderProp
                 {label}
               </button>
             ))}
-            <a
+            
               href="tel:+380442923133"
               className="flex items-center gap-2 w-full text-left px-4 py-3 rounded-lg text-sm font-medium text-white bg-red-600 hover:bg-red-700 transition-colors mt-2"
             >
