@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FileText, DollarSign, Users, BarChart2, ChevronRight } from 'lucide-react';
+import { FileText, ChevronRight } from 'lucide-react';
 
 const openData = [
   {
@@ -39,14 +39,21 @@ const openData = [
     link: 'https://docs.google.com/document/d/e/2PACX-1vQIh91BZfXegzf2WE7XkrZDIkbrquEHTdxQ9Kbm3v1UtvIc91M2fJ5MPoHCCghOTBIlNTutECwplQMK/pub',
   },
 ];
-];
 
 export default function Transparency() {
   const [openModal, setOpenModal] = useState(false);
 
+  const handleClick = (item) => {
+    if (item.modal) {
+      setOpenModal(true);
+    } else if (item.link) {
+      window.open(item.link, '_blank');
+    }
+  };
+
   return (
     <div className="pt-20">
-
+      
       {/* Hero */}
       <section className="relative py-20 bg-gray-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -57,52 +64,33 @@ export default function Transparency() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-900/70" />
         </div>
-        <div className="absolute left-0 top-0 bottom-0 w-1.5 flex flex-col">
-          <div className="flex-1 bg-gray-700" />
-          <div className="flex-1 bg-red-600" />
-          <div className="flex-1 bg-amber-400" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-400 bg-amber-400/10 border border-amber-400/20 px-3 py-1.5 rounded-full mb-4">
-            Відкритість та прозорість
-          </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
+
+        <div className="relative max-w-7xl mx-auto px-4">
+          <h1 className="text-4xl font-extrabold text-white mb-4">
             Ми відкриті <span className="text-amber-400">для вас</span>
           </h1>
-          <p className="text-gray-300 max-w-xl text-lg leading-relaxed">
-            Документи, звіти та інформація про діяльність ліцею у відкритому доступі.
+          <p className="text-gray-300 max-w-xl text-lg">
+            Документи, звіти та інформація у відкритому доступі.
           </p>
         </div>
       </section>
 
-      {/* Публичная информация */}
+      {/* List */}
       <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">
-              Відкритість
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 mb-3">
-              Публічна інформація
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Повний перелік відкритих даних відповідно до вимог законодавства.
-            </p>
-          </div>
+        <div className="max-w-5xl mx-auto px-4">
 
           <div className="flex flex-col gap-3">
-            {openData.map((title, i) => (
+            {openData.map((item, i) => (
               <button
                 key={i}
-                onClick={() => i === 2 && setOpenModal(true)}
-                className="group w-full flex items-center justify-between text-left px-6 py-4 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 hover:border-red-200 transition-all duration-200 shadow-sm hover:shadow-md"
+                onClick={() => handleClick(item)}
+                className="group w-full flex items-center justify-between text-left px-6 py-4 rounded-xl border border-gray-200 hover:bg-gray-50 transition"
               >
-                <span className="text-gray-900 font-medium leading-snug">
-                  {title}
+                <span className="text-gray-900 font-medium">
+                  {item.title}
                 </span>
 
-                <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-red-600 group-hover:translate-x-1 transition-all" />
+                <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-red-600 group-hover:translate-x-1 transition" />
               </button>
             ))}
           </div>
@@ -110,85 +98,36 @@ export default function Transparency() {
         </div>
       </section>
 
-      {/* Блок 1 */}
+      {/* Cards */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">
-              Документи
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 mb-3">
-              Офіційні документи
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Статути, ліцензії, накази та інші офіційні матеріали ліцею.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { icon: <FileText className="w-6 h-6" />, title: 'Статут ліцею', desc: 'Основний установчий документ закладу.' },
-              { icon: <FileText className="w-6 h-6" />, title: 'Ліцензія на освітню діяльність', desc: 'Дозвіл на провадження освітньої діяльності.' },
-              { icon: <FileText className="w-6 h-6" />, title: 'Накази та розпорядження', desc: 'Актуальні накази адміністрації ліцею.' },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} className="border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
-                <div className="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center shrink-0">
-                  {icon}
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">{title}</h3>
-                  <p className="text-sm text-gray-500">{desc}</p>
-                  <button className="mt-3 flex items-center gap-1 text-sm font-semibold text-red-600 hover:text-red-700 transition-colors">
-                    Переглянути <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-4">
+          {[
+            { title: 'Статут ліцею', desc: 'Основний документ' },
+            { title: 'Ліцензія', desc: 'Дозвіл на діяльність' },
+            { title: 'Накази', desc: 'Документи адміністрації' },
+          ].map((item) => (
+            <div key={item.title} className="p-6 border rounded-xl">
+              <FileText className="mb-3" />
+              <h3 className="font-bold">{item.title}</h3>
+              <p className="text-sm text-gray-500">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-amber-50 border-t border-amber-100">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-3">
-            Маєте запитання щодо діяльності ліцею?
-          </h2>
-          <p className="text-gray-600 mb-6">
-            Ми завжди відкриті до діалогу. Зв'яжіться з нами.
-          </p>
-
-          <a
-            href="tel:+380442923133"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors shadow-sm"
-          >
-            Зателефонувати
-          </a>
-        </div>
-      </section>
-
-      {/* POPUP */}
+      {/* Modal */}
       {openModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-          
-          <div className="bg-white w-full max-w-4xl h-[85vh] rounded-2xl shadow-xl flex flex-col overflow-hidden">
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 p-4">
+          <div className="bg-white w-full max-w-3xl h-[80vh] rounded-xl flex flex-col">
             
-            <div className="flex items-center justify-between px-6 py-4 border-b">
-              <h2 className="text-lg font-bold text-gray-900">
-                Структура управління
-              </h2>
-
-              <button
-                onClick={() => setOpenModal(false)}
-                className="text-gray-400 hover:text-gray-700 text-xl"
-              >
-                ✕
-              </button>
+            <div className="flex justify-between p-4 border-b">
+              <h2 className="font-bold">Структура управління</h2>
+              <button onClick={() => setOpenModal(false)}>✕</button>
             </div>
 
-            <div className="flex-1 overflow-y-auto px-6 py-5 text-sm text-gray-700 space-y-4">
-              {/* вставь сюда свой полный текст */}
-             <h2>СТРУКТУРА НАВЧАЛЬНОГО ЗАКЛАДУ ТА ОРГАНИ УПРАВЛІННЯ ЗАКЛАДУ ОСВІТИ</h2>
+            <div className="overflow-y-auto p-4 text-sm">
+              {/* ВЕСЬ ТВОЙ ТЕКСТ ОСТАЁТСЯ БЕЗ ИЗМЕНЕНИЙ */}
+                  <h2>СТРУКТУРА НАВЧАЛЬНОГО ЗАКЛАДУ ТА ОРГАНИ УПРАВЛІННЯ ЗАКЛАДУ ОСВІТИ</h2>
 
 <p><em>(Відповідно до Статуту затвердженого розпорядженням Дніпровської районної в місті Києві державної адміністрації від 09.08.2024 року № 524)</em></p>
 
@@ -434,8 +373,8 @@ export default function Transparency() {
 <p>через своїх представників брати участь у засіданнях Педагогічної ради з усіх питань, що стосуються організації та реалізації освітнього процесу.</p>
 
 <p><strong>5.30.</strong> Діяльність органів учнівського самоврядування не повинна призводити до порушення законодавства, цього Статуту, Правил внутрішнього розпорядку, прав та законних інтересів інших учасників освітнього процесу.</p>
+            </div>
 
-               </div>
           </div>
         </div>
       )}
