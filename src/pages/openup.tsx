@@ -40,6 +40,40 @@ const openData = [
   },
 ];
 
+const reports = [
+  {
+    year: 2025,
+    items: [
+      { title: 'Кошторис на 2025 рік', link: '#' },
+      { title: 'Звіт за 2025 рік', link: '#' },
+    ],
+  },
+  {
+    year: 2024,
+    items: [
+      { title: 'Кошторис на 2024 рік', link: '#' },
+      { title: 'Звіт за 2024 рік', link: '#' },
+      { title: 'Матеріальні цінності за 2024 рік', link: '#' },
+    ],
+  },
+  {
+    year: 2023,
+    items: [
+      { title: 'Кошторис на 2023 рік', link: '#' },
+      { title: 'Звіт за 2023 рік', link: '#' },
+      { title: 'Матеріальні цінності за 2023 рік', link: '#' },
+    ],
+  },
+  {
+    year: 2022,
+    items: [
+      { title: 'Кошторис на 2022 рік', link: '#' },
+      { title: 'Звіт за 2022 рік', link: '#' },
+      { title: 'Матеріальні цінності за 2022 рік', link: '#' },
+    ],
+  },
+];
+
 export default function Transparency() {
   const [openModal, setOpenModal] = useState(false);
 
@@ -98,6 +132,41 @@ export default function Transparency() {
         </div>
       </section>
 
+      {/* Reports */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+
+          <h2 className="text-2xl font-bold mb-6">
+            Кошториси та звіти
+          </h2>
+
+          <div className="space-y-6">
+            {reports.map((block) => (
+              <div key={block.year} className="border rounded-xl p-4">
+
+                <h3 className="font-bold mb-3">
+                  {block.year} рік
+                </h3>
+
+                {block.items.map((item) => (
+                  <a
+                    key={item.title}
+                    href={item.link}
+                    target="_blank"
+                    className="flex justify-between py-2 border-b last:border-none hover:text-red-600"
+                  >
+                    {item.title}
+                    <ChevronRight className="w-4 h-4" />
+                  </a>
+                ))}
+
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
       {/* Cards */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-4">
@@ -126,8 +195,7 @@ export default function Transparency() {
             </div>
 
             <div className="overflow-y-auto p-4 text-sm">
-              {/* ВЕСЬ ТВОЙ ТЕКСТ ОСТАЁТСЯ БЕЗ ИЗМЕНЕНИЙ */}
-                  <h2>СТРУКТУРА НАВЧАЛЬНОГО ЗАКЛАДУ ТА ОРГАНИ УПРАВЛІННЯ ЗАКЛАДУ ОСВІТИ</h2>
+              <h2>СТРУКТУРА НАВЧАЛЬНОГО ЗАКЛАДУ ТА ОРГАНИ УПРАВЛІННЯ ЗАКЛАДУ ОСВІТИ</h2>
 
 <p><em>(Відповідно до Статуту затвердженого розпорядженням Дніпровської районної в місті Києві державної адміністрації від 09.08.2024 року № 524)</em></p>
 
