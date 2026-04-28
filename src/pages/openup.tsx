@@ -1,5 +1,25 @@
 import { FileText, DollarSign, Users, BarChart2, ChevronRight } from 'lucide-react';
 
+const openData = [
+  'Статут закладу освіти',
+  'Ліцензії на провадження освітньої діяльності. Свідоцтво про атестацію',
+  'Структура та органи управління закладу освіти',
+  'Кадровий склад згідно з ліцензійними умовами',
+  'Освітні програми та перелік освітніх компонентів',
+  'Територія обслуговування, закріплена за закладом',
+  'Ліцензований обсяг та фактична кількість здобувачів освіти',
+  'Мова освітнього процесу',
+  'Наявність вакантних посад, умови та порядок проведення конкурсу',
+  'Матеріально-технічне забезпечення',
+  'Результати моніторингу якості освіти',
+  'Річний звіт про діяльність закладу',
+  'Правила прийому',
+  'Умови доступності для осіб з особливими освітніми потребами',
+  'Перелік додаткових освітніх та інших послуг',
+  'Правила поведінки здобувача освіти',
+  'Протидія булінгу, насильству та жорстокому поводженню з дітьми',
+];
+
 export default function Transparency() {
   return (
     <div className="pt-20">
@@ -32,8 +52,42 @@ export default function Transparency() {
         </div>
       </section>
 
-      {/* Блок 1 */}
+      {/* Новый блок — Публичная информация */}
       <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">
+              Відкритість
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 mb-3">
+              Публічна інформація
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto">
+              Повний перелік відкритих даних відповідно до вимог законодавства.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            {openData.map((title, i) => (
+              <button
+                key={i}
+                className="group w-full flex items-center justify-between text-left px-6 py-4 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 hover:border-red-200 transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                <span className="text-gray-900 font-medium leading-snug">
+                  {title}
+                </span>
+
+                <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-red-600 group-hover:translate-x-1 transition-all" />
+              </button>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* Блок 1 */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">
@@ -64,76 +118,6 @@ export default function Transparency() {
                     Переглянути <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Блок 2 */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full">
-              Фінанси
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 mb-3">
-              Фінансова звітність
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Відкриті дані про бюджет, видатки та фінансову діяльність закладу.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-4">
-            {[
-              { icon: <DollarSign className="w-6 h-6" />, title: 'Бюджет на 2024 рік', desc: 'Затверджений кошторис доходів та видатків.' },
-              { icon: <BarChart2 className="w-6 h-6" />, title: 'Річний фінансовий звіт', desc: 'Звіт про виконання кошторису за минулий рік.' },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} className="border border-amber-100 rounded-2xl p-6 shadow-sm bg-white hover:shadow-md transition-shadow flex items-start gap-4">
-                <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center shrink-0">
-                  {icon}
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">{title}</h3>
-                  <p className="text-sm text-gray-500">{desc}</p>
-                  <button className="mt-3 flex items-center gap-1 text-sm font-semibold text-amber-600 hover:text-amber-700 transition-colors">
-                    Завантажити <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Блок 3 */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-              Управління
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 mb-3">
-              Структура управління
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Органи управління ліцею та їхні повноваження.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-3 gap-4">
-            {[
-              { icon: <Users className="w-6 h-6" />, title: 'Педагогічна рада', desc: 'Колегіальний орган управління навчальним процесом.' },
-              { icon: <Users className="w-6 h-6" />, title: 'Батьківський комітет', desc: 'Представники батьків у вирішенні ключових питань.' },
-              { icon: <Users className="w-6 h-6" />, title: 'Учнівське самоврядування', desc: 'Голос учнів у житті ліцею.' },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} className="text-center p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  {icon}
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
-                <p className="text-sm text-gray-500">{desc}</p>
               </div>
             ))}
           </div>
