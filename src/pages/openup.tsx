@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FileText, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 const openData = [
   {
@@ -39,29 +39,53 @@ const openData = [
     link: 'https://docs.google.com/document/d/e/2PACX-1vQIh91BZfXegzf2WE7XkrZDIkbrquEHTdxQ9Kbm3v1UtvIc91M2fJ5MPoHCCghOTBIlNTutECwplQMK/pub',
   },
 
-  // 10
+  // 10 ПРОСТОЙ
   {
     title: '10. Матеріально-технічне забезпечення',
     children: true,
     content: (
       <div className="bg-gray-50 px-6 py-4 flex flex-col gap-2">
-        {[2025, 2024, 2023, 2022].map((year) => (
-          <div key={year} className="flex flex-col border-b pb-2 mb-2">
 
-            <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
-              Кошторис на {year} рік <ChevronRight className="w-4 h-4" />
-            </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+          Кошторис на 2025 рік <ChevronRight className="w-4 h-4" />
+        </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+          Звіт за 2025 рік <ChevronRight className="w-4 h-4" />
+        </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600 mb-2">
+          Матеріальні цінності за 2025 рік <ChevronRight className="w-4 h-4" />
+        </a>
 
-            <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
-              Звіт за {year} рік <ChevronRight className="w-4 h-4" />
-            </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+          Кошторис на 2024 рік <ChevronRight className="w-4 h-4" />
+        </a>
+        <a href="https://drive.google.com/file/d/1mwtBZVrJrVy_z9MGwRxFXlWilYwy3ndS/view" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+          Звіт за 2024 рік <ChevronRight className="w-4 h-4" />
+        </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600 mb-2">
+          Матеріальні цінності за 2024 рік <ChevronRight className="w-4 h-4" />
+        </a>
 
-            <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
-              Матеріальні цінності за {year} рік <ChevronRight className="w-4 h-4" />
-            </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+          Кошторис на 2023 рік <ChevronRight className="w-4 h-4" />
+        </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+          Звіт за 2023 рік <ChevronRight className="w-4 h-4" />
+        </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600 mb-2">
+          Матеріальні цінності за 2023 рік <ChevronRight className="w-4 h-4" />
+        </a>
 
-          </div>
-        ))}
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+          Кошторис на 2022 рік <ChevronRight className="w-4 h-4" />
+        </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+          Звіт за 2022 рік <ChevronRight className="w-4 h-4" />
+        </a>
+        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+          Матеріальні цінності за 2022 рік <ChevronRight className="w-4 h-4" />
+        </a>
+
       </div>
     ),
   },
@@ -78,42 +102,25 @@ const openData = [
     content: (
       <div className="bg-gray-50 px-6 py-4 flex flex-col gap-2">
 
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1pa4ascygff7y6J5Lko0APTALNAsggQqd/view?usp=sharing" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Річний звіт за 2024–2025 н. р. <ChevronRight className="w-4 h-4" />
         </a>
 
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1Kq8hGaw2Yej5GJSQy3tCSA0IPKYUpVsD/view" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Річний звіт за 2023–2024 н. р. <ChevronRight className="w-4 h-4" />
-        </a>
-
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
-          Річний звіт за 2022–2023 н. р. <ChevronRight className="w-4 h-4" />
         </a>
 
       </div>
     ),
   },
 
-  // 13 — ПРОСТА ССЫЛКА
   {
     title: '13. Правила прийому',
     link: 'https://docs.google.com/document/d/e/2PACX-1vSTzwGXt5MUO6zxjRbRjAY7dtcDTfpiKU79MJZkxhZJE6X3F8En3RGAr0jpxUhHXQp6aS8Rav4mJleX/pub',
   },
-
-  {
-    title: '14. Умови доступності для осіб з ООП',
-    link: '#',
-  },
-  {
-    title: '15. Додаткові освітні послуги',
-    link: '#',
-  },
-  {
-    title: '16. Правила поведінки здобувача освіти',
-    link: '#',
-  },
-
-  // 17 — ПРОСТА ССЫЛКА
+  { title: '14. Умови доступності для осіб з ООП', link: '#' },
+  { title: '15. Додаткові освітні послуги', link: '#' },
+  { title: '16. Правила поведінки здобувача освіти', link: '#' },
   {
     title: '17. Протидія булінгу',
     link: 'https://docs.google.com/document/d/e/2PACX-1vSLvSwAPJ88RiyDVhCaKXI3vndUh3LRQz4AWNmgFohN7WDTviAlP9lRCsOYiB0-2lhYquAp-Y8yoSo3/pub',
@@ -133,7 +140,6 @@ export default function Openup() {
 
   return (
     <div className="pt-20">
-
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
 
@@ -149,7 +155,11 @@ export default function Openup() {
                     {item.title}
                   </span>
 
-                  <ChevronRight className={`w-5 h-5 text-gray-400 transition ${openIndex === i ? 'rotate-90 text-red-600' : 'group-hover:text-red-600 group-hover:translate-x-1'}`} />
+                  <ChevronRight className={`w-5 h-5 transition ${
+                    openIndex === i
+                      ? 'rotate-90 text-red-600'
+                      : 'text-gray-400 group-hover:text-red-600 group-hover:translate-x-1'
+                  }`} />
                 </button>
 
                 {item.children && openIndex === i && (
@@ -162,7 +172,6 @@ export default function Openup() {
 
         </div>
       </section>
-
     </div>
   );
 }
