@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FileText, DollarSign, Users, BarChart2, ChevronRight } from 'lucide-react';
 
 const openData = [
@@ -21,6 +22,8 @@ const openData = [
 ];
 
 export default function Transparency() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="pt-20">
 
@@ -52,7 +55,7 @@ export default function Transparency() {
         </div>
       </section>
 
-      {/* Новый блок — Публичная информация */}
+      {/* Публичная информация */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -72,6 +75,7 @@ export default function Transparency() {
             {openData.map((title, i) => (
               <button
                 key={i}
+                onClick={() => i === 2 && setOpenModal(true)}
                 className="group w-full flex items-center justify-between text-left px-6 py-4 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 hover:border-red-200 transition-all duration-200 shadow-sm hover:shadow-md"
               >
                 <span className="text-gray-900 font-medium leading-snug">
@@ -142,6 +146,35 @@ export default function Transparency() {
           </a>
         </div>
       </section>
+
+      {/* POPUP */}
+      {openModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+          
+          <div className="bg-white w-full max-w-4xl h-[85vh] rounded-2xl shadow-xl flex flex-col overflow-hidden">
+            
+            <div className="flex items-center justify-between px-6 py-4 border-b">
+              <h2 className="text-lg font-bold text-gray-900">
+                Структура управління
+              </h2>
+
+              <button
+                onClick={() => setOpenModal(false)}
+                className="text-gray-400 hover:text-gray-700 text-xl"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto px-6 py-5 text-sm text-gray-700 space-y-4">
+              {/* вставь сюда свой полный текст */}
+              <p><strong>І. Загальні положення</strong></p>
+              <p>Ліцей №167 є комунальним закладом освіти...</p>
+            </div>
+
+          </div>
+        </div>
+      )}
 
     </div>
   );
