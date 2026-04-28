@@ -32,7 +32,7 @@ export default function Transparency() {
         </div>
       </section>
 
-      {/* Блок 1 — Документи */}
+      {/* Блок 1 */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -70,7 +70,7 @@ export default function Transparency() {
         </div>
       </section>
 
-      {/* Блок 2 — Фінанси */}
+      {/* Блок 2 */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -107,7 +107,7 @@ export default function Transparency() {
         </div>
       </section>
 
-      {/* Блок 3 — Управління */}
+      {/* Блок 3 */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -146,8 +146,11 @@ export default function Transparency() {
           <h2 className="text-2xl font-extrabold text-gray-900 mb-3">
             Маєте запитання щодо діяльності ліцею?
           </h2>
-          <p className="text-gray-600 mb-6">Ми завжди відкриті до діалогу. Зв'яжіться з нами.</p>
-          
+          <p className="text-gray-600 mb-6">
+            Ми завжди відкриті до діалогу. Зв'яжіться з нами.
+          </p>
+
+          <a
             href="tel:+380442923133"
             className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors shadow-sm"
           >
