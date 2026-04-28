@@ -42,6 +42,8 @@ export default function Header({ currentPage, navigate, isScrolled }: HeaderProp
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
+          
+          {/* ЛОГО */}
           <button
             onClick={() => handleNav('home')}
             className="flex items-center gap-2 group"
@@ -55,6 +57,7 @@ export default function Header({ currentPage, navigate, isScrolled }: HeaderProp
             </div>
           </button>
 
+          {/* НАВИГАЦИЯ */}
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map(({ label, page }) => (
               <button
@@ -71,15 +74,17 @@ export default function Header({ currentPage, navigate, isScrolled }: HeaderProp
             ))}
           </nav>
 
+          {/* КНОПКА */}
           <div className="flex items-center gap-3">
-            <a
-              href="tel:+380442923133"
+            <button
+              onClick={() => handleNav('contacts')}
               className="hidden sm:flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors shadow-sm"
             >
               <Phone className="w-4 h-4" />
               <span>Зателефонувати</span>
-            </a>
+            </button>
 
+            {/* БУРГЕР */}
             <button
               className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -91,9 +96,11 @@ export default function Header({ currentPage, navigate, isScrolled }: HeaderProp
         </div>
       </div>
 
+      {/* МОБИЛЬНОЕ МЕНЮ */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 py-3 space-y-1">
+            
             {navLinks.map(({ label, page }) => (
               <button
                 key={page}
@@ -108,13 +115,15 @@ export default function Header({ currentPage, navigate, isScrolled }: HeaderProp
               </button>
             ))}
 
-            <a
-              href="tel:+380442923133"
+            {/* МОБИЛЬНАЯ КНОПКА */}
+            <button
+              onClick={() => handleNav('contacts')}
               className="flex items-center gap-2 w-full text-left px-4 py-3 rounded-lg text-sm font-medium text-white bg-red-600 hover:bg-red-700 transition-colors mt-2"
             >
               <Phone className="w-4 h-4" />
-              +380 44 292 3133
-            </a>
+              Перейти до контактів
+            </button>
+
           </div>
         </div>
       )}
