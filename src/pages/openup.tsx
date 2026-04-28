@@ -2,23 +2,43 @@ import { useState } from 'react';
 import { FileText, DollarSign, Users, BarChart2, ChevronRight } from 'lucide-react';
 
 const openData = [
-  'Статут закладу освіти',
-  'Ліцензії на провадження освітньої діяльності. Свідоцтво про атестацію',
-  'Структура та органи управління закладу освіти',
-  'Кадровий склад згідно з ліцензійними умовами',
-  'Освітні програми та перелік освітніх компонентів',
-  'Територія обслуговування, закріплена за закладом',
-  'Ліцензований обсяг та фактична кількість здобувачів освіти',
-  'Мова освітнього процесу',
-  'Наявність вакантних посад, умови та порядок проведення конкурсу',
-  'Матеріально-технічне забезпечення',
-  'Результати моніторингу якості освіти',
-  'Річний звіт про діяльність закладу',
-  'Правила прийому',
-  'Умови доступності для осіб з особливими освітніми потребами',
-  'Перелік додаткових освітніх та інших послуг',
-  'Правила поведінки здобувача освіти',
-  'Протидія булінгу, насильству та жорстокому поводженню з дітьми',
+  {
+    title: 'Статут закладу освіти',
+    link: 'https://www.lyzeum167.com/_files/ugd/09b7e1_9c641be4511042039cc3eb68e9b4d6bf.pdf',
+  },
+  {
+    title: 'Ліцензії на провадження освітньої діяльності',
+    link: 'https://www.lyzeum167.com/_files/ugd/09b7e1_4681c065983e4e3aa825521d93606f48.pdf',
+  },
+  {
+    title: 'Структура та органи управління закладу освіти',
+    modal: true,
+  },
+  {
+    title: 'Кадровий склад згідно з ліцензійними умовами',
+    link: 'https://www.lyzeum167.com/_files/ugd/09b7e1_b660df42a31248588626a3ed9d512983.pdf',
+  },
+  {
+    title: 'Освітні програми та перелік освітніх компонентів',
+    link: 'https://drive.google.com/file/d/1Ca2cP_wmMVqt0kPzLprrEjHPGQVXQMR0/view?usp=sharing',
+  },
+  {
+    title: 'Територія обслуговування',
+    link: 'https://maps.app.goo.gl/UztaEwAx1RFrGLEP6',
+  },
+  {
+    title: 'Ліцензований обсяг та фактична кількість здобувачів освіти',
+    link: 'https://docs.google.com/document/d/e/2PACX-1vSWNBte_d7dK--5GuLyTelmHHytPP_-pc-_mg3NlaR4ZOxLQ2lMdSBdxoooQjhcJaq-0fl9uy0-HSfw/pub',
+  },
+  {
+    title: 'Мова освітнього процесу',
+    link: 'https://docs.google.com/document/d/e/2PACX-1vRZNdnUSOwDc84Y2URcyISm3eXWLiLJ47-HFKddJPUQ0iQ_xH6rQG__oVo2LZJHggWqYSTcw91nIBrU/pub',
+  },
+  {
+    title: 'Наявність вакантних посад',
+    link: 'https://docs.google.com/document/d/e/2PACX-1vQIh91BZfXegzf2WE7XkrZDIkbrquEHTdxQ9Kbm3v1UtvIc91M2fJ5MPoHCCghOTBIlNTutECwplQMK/pub',
+  },
+];
 ];
 
 export default function Transparency() {
