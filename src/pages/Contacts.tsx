@@ -218,7 +218,7 @@ export default function Contacts() {
       {/* MAP */}
       <section className="py-10 text-center">
         <a
-          href="https://maps.google.com/?q=Київ"
+          href="https://maps.google.com/?q=м. Київ, пр. Соборності 12-В"
           target="_blank"
           rel="noopener noreferrer"
           className="text-red-600 font-semibold"
