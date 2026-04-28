@@ -81,29 +81,55 @@ export default function Transparency() {
 
                 {/* ▼ раскрытие для 10 пункта */}
                 {i === 9 && openSection === i && (
-                  <div className="bg-gray-50 px-6 py-4 flex flex-col gap-2">
+                 <div className="bg-gray-50 px-6 py-4 flex flex-col gap-2">
 
-                    <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
-                      Кошторис на 2025 рік <ChevronRight className="w-4 h-4" />
-                    </a>
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Кошторис на 2025 рік <ChevronRight className="w-4 h-4" />
+  </a>
 
-                    <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
-                      Звіт за 2025 рік <ChevronRight className="w-4 h-4" />
-                    </a>
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Звіт за 2025 рік <ChevronRight className="w-4 h-4" />
+  </a>
 
-                    <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
-                      Кошторис на 2024 рік <ChevronRight className="w-4 h-4" />
-                    </a>
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Кошторис на 2024 рік <ChevronRight className="w-4 h-4" />
+  </a>
 
-                    <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
-                      Звіт за 2024 рік <ChevronRight className="w-4 h-4" />
-                    </a>
+  <a href="https://drive.google.com/file/d/1mwtBZVrJrVy_z9MGwRxFXlWilYwy3ndS/view" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Звіт за 2024 рік <ChevronRight className="w-4 h-4" />
+  </a>
 
-                    <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
-                      Матеріальні цінності за 2024 рік <ChevronRight className="w-4 h-4" />
-                    </a>
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Матеріальні цінності за 2024 рік <ChevronRight className="w-4 h-4" />
+  </a>
 
-                  </div>
+  {/* 2023 */}
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Кошторис на 2023 рік <ChevronRight className="w-4 h-4" />
+  </a>
+
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Звіт за 2023 рік <ChevronRight className="w-4 h-4" />
+  </a>
+
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Матеріальні цінності за 2023 рік <ChevronRight className="w-4 h-4" />
+  </a>
+
+  {/* 2022 */}
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Кошторис на 2022 рік <ChevronRight className="w-4 h-4" />
+  </a>
+
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Звіт за 2022 рік <ChevronRight className="w-4 h-4" />
+  </a>
+
+  <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+    Матеріальні цінності за 2022 рік <ChevronRight className="w-4 h-4" />
+  </a>
+
+</div>
                 )}
 
               </div>
