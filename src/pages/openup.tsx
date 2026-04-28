@@ -46,43 +46,43 @@ const openData = [
     content: (
       <div className="bg-gray-50 px-6 py-4 flex flex-col gap-2">
 
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1hLb8FI0gy4wnQ6WLgPBAOPdP4T1dRTqz/view?usp=sharing" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Кошторис на 2025 рік <ChevronRight className="w-4 h-4" />
         </a>
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1ksv3UcZDBIsOR0tjDlAsRm32fB6y_FcJ/view?usp=sharing" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Звіт за 2025 рік <ChevronRight className="w-4 h-4" />
         </a>
         <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600 mb-2">
           Матеріальні цінності за 2025 рік <ChevronRight className="w-4 h-4" />
         </a>
 
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1kd7QvFgeYLvxxfQuQHVZqK9kkjluuegE/view" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Кошторис на 2024 рік <ChevronRight className="w-4 h-4" />
         </a>
         <a href="https://drive.google.com/file/d/1mwtBZVrJrVy_z9MGwRxFXlWilYwy3ndS/view" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Звіт за 2024 рік <ChevronRight className="w-4 h-4" />
         </a>
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600 mb-2">
+        <a href="https://drive.google.com/file/d/1NIZRBR2pE5ctw_dbm0sMXGYaVfuO_aPE/view?usp=drive_link" target="_blank" className="flex justify-between text-sm hover:text-red-600 mb-2">
           Матеріальні цінності за 2024 рік <ChevronRight className="w-4 h-4" />
         </a>
 
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1oTyC1A5uZ3Bv5PakaoaY52ZXCB49XFm6/view" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Кошторис на 2023 рік <ChevronRight className="w-4 h-4" />
         </a>
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1PQSRD1uU3etWrGnKAYxXPYJMpLqcSif6/view" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Звіт за 2023 рік <ChevronRight className="w-4 h-4" />
         </a>
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600 mb-2">
+        <a href="https://drive.google.com/file/d/1LO0sCD4mbRhuywiVHNFvLguafBRY45sw/view?usp=drive_link" target="_blank" className="flex justify-between text-sm hover:text-red-600 mb-2">
           Матеріальні цінності за 2023 рік <ChevronRight className="w-4 h-4" />
         </a>
 
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1hIL9FCw0PWQ36O0BdGtkSEFa2hDzCKHi/view" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Кошторис на 2022 рік <ChevronRight className="w-4 h-4" />
         </a>
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1fV8oaJssoeOeOHjlUeU5RT1WdegLpIwL/view" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Звіт за 2022 рік <ChevronRight className="w-4 h-4" />
         </a>
-        <a href="#" target="_blank" className="flex justify-between text-sm hover:text-red-600">
+        <a href="https://drive.google.com/file/d/1geiPfXFsLgT3sWyAtE5-ea8da09aHaL2/view?usp=drive_link" target="_blank" className="flex justify-between text-sm hover:text-red-600">
           Матеріальні цінності за 2022 рік <ChevronRight className="w-4 h-4" />
         </a>
 
