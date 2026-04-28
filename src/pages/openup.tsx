@@ -169,7 +169,7 @@ export default function Transparency() {
             <div className="flex-1 overflow-y-auto px-6 py-5 text-sm text-gray-700 space-y-4">
               {/* вставь сюда свой полный текст */}
               <p><strong>І. Загальні положення</strong></p>
-              <p>Ліцей №167 є комунальним закладом освіти...</p>
+              <p>Ліцей №167 є комунальним закладом освіти.1..</p>
             </div>
 
           </div>
