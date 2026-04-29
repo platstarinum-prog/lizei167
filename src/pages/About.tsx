@@ -210,9 +210,6 @@ export default function About() {
       </section>
       
 
-
-
-          
             
       
           <div className="text-center mt-10">
@@ -221,7 +218,6 @@ export default function About() {
               <span className="text-gray-700 font-medium">50+ педагогів у нашому колективі</span>
             </div>
           </div>
-        </div>
       </section>
     
     </div>
