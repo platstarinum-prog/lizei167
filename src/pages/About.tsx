@@ -221,29 +221,13 @@ export default function About() {
           </div>
           <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
             {[
-              {
-                name: 'Марія Ковальська',
-                role: 'Директор ліцею',
-                img: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=400',
-              },
-              {
-                name: 'Олена Шевченко',
-                role: 'Заступник директора з навч. роботи',
-                img: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400',
-              },
-              {
-                name: 'Андрій Мельник',
-                role: 'Керівник кафедри нім. мови',
-                img: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
-              },
+              { name: 'Марія Ковальська', role: 'Директор ліцею', img: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'Олена Шевченко', role: 'Заступник директора з навч. роботи', img: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'Андрій Мельник', role: 'Керівник кафедри нім. мови', img: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400' },
             ].map(({ name, role, img }) => (
               <div key={name} className="text-center group">
                 <div className="relative inline-block mb-4">
-                  <img
-                    src={img}
-                    alt={name}
-                    className="w-24 h-24 rounded-full object-cover mx-auto shadow-md group-hover:shadow-lg transition-shadow"
-                  />
+                  <img src={img} alt={name} className="w-24 h-24 rounded-full object-cover mx-auto shadow-md group-hover:shadow-lg transition-shadow" />
                   <div className="absolute inset-0 rounded-full ring-0 group-hover:ring-4 ring-red-200 transition-all" />
                 </div>
                 <h3 className="font-bold text-gray-900">{name}</h3>
@@ -260,25 +244,22 @@ export default function About() {
         </div>
       </section>
 
-      {/* Popup ДСД */}
+      {/* Popup */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div
-            onClick={() => setOpen(false)}
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-          />
+          <div onClick={() => setOpen(false)} className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+
           <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 p-6">
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute top-3 right-3 text-gray-400 hover:text-gray-700"
-            >
+            <button onClick={() => setOpen(false)} className="absolute top-3 right-3 text-gray-400 hover:text-gray-700">
               <X className="w-5 h-5" />
             </button>
+
             <h2 className="text-xl font-bold mb-3">Документ ДСД</h2>
             <p className="text-gray-600 mb-6">
               Тут можеш вставити будь-який текст або опис документа.
             </p>
-            
+
+            <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
