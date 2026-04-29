@@ -12,7 +12,7 @@ const links: { label: string; page: Page }[] = [
   { label: 'Новини', page: 'news' },
   { label: 'Відгуки', page: 'reviews' },
   { label: 'Контакти', page: 'contacts' },
-  { label: 'Контакти', page: 'openup' },
+  { label: 'Відкритість', page: 'openup' },
 ];
 
 export default function Footer({ navigate }: FooterProps) {
