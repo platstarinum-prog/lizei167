@@ -208,7 +208,45 @@ export default function About() {
           </div>
         </div>
       </section>
-
+      
+  {/* Team */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full">
+              Команда
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 mb-3">
+              Наш педагогічний колектив
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto">
+              50+ досвідчених педагогів, закоханих у свою справу.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            {[
+              { name: 'Марія Ковальська', role: 'Директор ліцею', img: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'Олена Шевченко', role: 'Заступник директора з навч. роботи', img: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400' },
+              { name: 'Андрій Мельник', role: 'Керівник кафедри нім. мови', img: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400' },
+            ].map(({ name, role, img }) => (
+              <div key={name} className="text-center group">
+                <div className="relative inline-block mb-4">
+                  <img src={img} alt={name} className="w-24 h-24 rounded-full object-cover mx-auto shadow-md group-hover:shadow-lg transition-shadow" />
+                  <div className="absolute inset-0 rounded-full ring-0 group-hover:ring-4 ring-red-200 transition-all" />
+                </div>
+                <h3 className="font-bold text-gray-900">{name}</h3>
+                <p className="text-sm text-gray-500 mt-0.5">{role}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-6 py-4 shadow-sm border border-gray-100">
+              <Users className="w-5 h-5 text-red-600" />
+              <span className="text-gray-700 font-medium">50+ педагогів у нашому колективі</span>
+            </div>
+          </div>
+        </div>
+      </section>
     
     </div>
   );
