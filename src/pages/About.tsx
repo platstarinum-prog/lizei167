@@ -223,20 +223,10 @@ export default function About() {
               50+ досвідчених педагогів, закоханих у свою справу.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            {[
-              { name: 'Марія Ковальська', role: 'Директор ліцею', img: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'Олена Шевченко', role: 'Заступник директора з навч. роботи', img: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'Андрій Мельник', role: 'Керівник кафедри нім. мови', img: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400' },
-            ].map(({ name, role, img }) => (
-              <div key={name} className="text-center group">
-                <div className="relative inline-block mb-4">
-                  <img src={img} alt={name} className="w-24 h-24 rounded-full object-cover mx-auto shadow-md group-hover:shadow-lg transition-shadow" />
-                  <div className="absolute inset-0 rounded-full ring-0 group-hover:ring-4 ring-red-200 transition-all" />
-                </div>
-                <h3 className="font-bold text-gray-900">{name}</h3>
-                <p className="text-sm text-gray-500 mt-0.5">{role}</p>
-              </div>
+
+
+
+          
             ))}
           </div>
           <div className="text-center mt-10">
