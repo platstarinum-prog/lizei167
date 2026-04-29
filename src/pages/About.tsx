@@ -228,15 +228,16 @@ export default function About() {
 
           
             
-      
+          </div>
           <div className="text-center mt-10">
             <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-6 py-4 shadow-sm border border-gray-100">
               <Users className="w-5 h-5 text-red-600" />
               <span className="text-gray-700 font-medium">50+ педагогів у нашому колективі</span>
             </div>
           </div>
+        </div>
       </section>
-      </div>
+    
     </div>
   );
 }
