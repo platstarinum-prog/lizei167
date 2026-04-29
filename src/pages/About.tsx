@@ -209,20 +209,6 @@ export default function About() {
         </div>
       </section>
       
-  {/* Team */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full">
-              Команда
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 mb-3">
-              Наш педагогічний колектив
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              50+ досвідчених педагогів, закоханих у свою справу.
-            </p>
-          </div>
 
 
 
