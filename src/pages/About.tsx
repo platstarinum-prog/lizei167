@@ -169,11 +169,54 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 bg-gray-50 text-center">
-        <Users className="mx-auto text-red-600" />
-        <p className="mt-4">50+ педагогів</p>
-      </section>
+    <button
+        onClick={() => setOpen(true)}
+        className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 active:scale-95 text-white font-semibold px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200"
+      >
+        <FileText className="w-5 h-5" />
+        Відкрити документ
+      </button>
+
+      {/* POPUP */}
+      {open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+
+          {/* затемнение */}
+          <div
+            onClick={() => setOpen(false)}
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          />
+
+          {/* окно */}
+          <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 animate-[fadeIn_0.2s_ease]">
+            
+            {/* крестик */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-3 right-3 text-gray-400 hover:text-gray-700"
+            >
+              <X />
+            </button>
+
+            {/* контент */}
+            <h2 className="text-xl font-bold mb-3">
+              Документ ДСД
+            </h2>
+
+            <p className="text-gray-600 mb-6">
+              Тут можеш вставити будь-який текст або опис документа.
+            </p>
+
+            {/* кнопка внутри */}
+            <a
+              href="/your-document.pdf"
+              target="_blank"
+              className="block text-center bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-medium transition"
+            >
+              Відкрити файл
+            </a>
+          </div>
+        </div>
 
     </div>
   );
