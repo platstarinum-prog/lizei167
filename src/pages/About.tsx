@@ -14,13 +14,13 @@ const values = [
   {
     icon: <Target className="w-6 h-6" />,
     title: 'Якість освіти',
-    desc: 'Найвищі стандарти навчання.',
+    desc: 'Ми прагнемо до найвищих стандартів навчання.',
     color: 'text-red-600',
     bg: 'bg-red-50',
   },
   {
     icon: <Heart className="w-6 h-6" />,
-    title: 'Повага',
+    title: 'Повага й підтримка',
     desc: 'Кожен учень — особистість.',
     color: 'text-amber-600',
     bg: 'bg-amber-50',
@@ -34,7 +34,7 @@ const values = [
   },
   {
     icon: <Globe className="w-6 h-6" />,
-    title: 'Відкритість',
+    title: 'Відкритість світу',
     desc: 'Освіта без кордонів.',
     color: 'text-green-600',
     bg: 'bg-green-50',
@@ -52,24 +52,27 @@ export default function About() {
             src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg"
             className="w-full h-full object-cover opacity-15"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-900/70" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl font-extrabold text-white mb-4">
+          <span className="text-amber-400 text-xs uppercase">Про нас</span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-2 mb-4">
             Наша <span className="text-red-500">історія</span>
           </h1>
-          <p className="text-gray-300">
-            Понад 55 років освіти
+          <p className="text-gray-300 max-w-xl text-lg">
+            Понад 55 років ми формуємо майбутнє через освіту.
           </p>
         </div>
       </section>
 
       {/* Mission */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
+        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
 
           <div>
-            <h2 className="text-3xl font-bold mb-4">
+            <span className="text-red-600 text-xs uppercase">Наша місія</span>
+            <h2 className="text-3xl font-extrabold mt-3 mb-5">
               Виховуємо особистостей
             </h2>
 
@@ -80,8 +83,8 @@ export default function About() {
                 'Патріотизм',
                 'Міжкультурний діалог',
               ].map((item) => (
-                <li key={item} className="flex gap-2">
-                  <CheckCircle className="text-green-500 w-5" />
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
                   {item}
                 </li>
               ))}
@@ -93,41 +96,59 @@ export default function About() {
 
       {/* Timeline */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 space-y-6">
-          {milestones.map(({ year, event }) => (
-            <div key={year} className="bg-white p-4 rounded-xl shadow">
-              <b className="text-red-600">{year}</b>
-              <p>{event}</p>
-            </div>
-          ))}
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-extrabold text-center mb-10">
+            Ключові моменти
+          </h2>
+
+          <div className="space-y-6">
+            {milestones.map(({ year, event }) => (
+              <div key={year} className="bg-white p-5 rounded-xl shadow-sm border">
+                <span className="text-red-600 font-bold">{year}</span>
+                <p className="text-gray-700 text-sm mt-1">{event}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Values */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map(({ icon, title, desc }) => (
-            <div key={title} className="p-6 border rounded-xl text-center">
-              {icon}
-              <h3 className="font-bold mt-2">{title}</h3>
-              <p className="text-sm text-gray-500">{desc}</p>
-            </div>
-          ))}
+        <div className="max-w-7xl mx-auto px-4 text-center mb-12">
+          <h2 className="text-3xl font-extrabold mb-10">
+            Що нами керує
+          </h2>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map(({ icon, title, desc, bg, color }) => (
+              <div key={title} className="p-6 rounded-2xl border hover:shadow-md transition">
+                <div className={`w-14 h-14 ${bg} ${color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  {icon}
+                </div>
+                <h3 className="font-bold">{title}</h3>
+                <p className="text-sm text-gray-500">{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 🔴 ВМЕСТО УЧИТЕЛЕЙ — КНОПКА */}
+      {/* 🔴 КНОПКА ВМЕСТО УЧИТЕЛЕЙ */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-3xl mx-auto px-4 text-center">
 
-          <h2 className="text-3xl font-bold mb-6">
-            Документ закладу
+          <h2 className="text-3xl font-extrabold mb-6">
+            Офіційний документ
           </h2>
 
+          <p className="text-gray-500 mb-8">
+            Натисніть кнопку нижче, щоб переглянути документ
+          </p>
+
           <a
-            href="https://docs.google.com/" // ← СЮДА СВОЮ ССЫЛКУ
+            href="https://docs.google.com/" // ← ВСТАВЬ СВОЮ ССЫЛКУ
             target="_blank"
-            className="inline-block bg-red-600 hover:bg-red-700 text-white text-lg font-semibold px-10 py-5 rounded-xl shadow-lg transition hover:scale-105"
+            className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-semibold text-lg px-10 py-5 rounded-xl shadow-md transition-all duration-200 hover:scale-105"
           >
             Відкрити документ
           </a>
