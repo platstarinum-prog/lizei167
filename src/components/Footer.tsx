@@ -12,6 +12,7 @@ const links: { label: string; page: Page }[] = [
   { label: 'Новини', page: 'news' },
   { label: 'Відгуки', page: 'reviews' },
   { label: 'Контакти', page: 'contacts' },
+  { label: 'Контакти', page: 'openup' },
 ];
 
 export default function Footer({ navigate }: FooterProps) {
@@ -89,7 +90,8 @@ export default function Footer({ navigate }: FooterProps) {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-500">© 2024 Ліцей №167. Всі права захищені.</p>
+          <p className="text-xs text-gray-500">© 2026 Ліцей №167. Всі права захищені.
+          друн</p>
           <p className="text-xs text-gray-500">Заклад загальної середньої освіти м. Києва</p>
         </div>
       </div>
