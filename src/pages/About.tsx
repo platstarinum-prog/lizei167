@@ -247,20 +247,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-    {/* Кнопка вместо popup */}
-      <div className="flex justify-center mt-10">
-        <a
-          href="https://docs.google.com/document/d/e/2PACX-1vR-h9TzRhZWrWu2OkcpD11KRckb8at1GKm3sgzMkvpjcXE2DiihNQuaWdTcx3sX21l_-mrBzpM_cwmN/pub"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200"
-        >
-          <FileText className="w-5 h-5" />
-          Інформація про програму ДСД
-        </a>
-      </div>
-
     </div>
   );
 }
