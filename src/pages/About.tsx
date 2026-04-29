@@ -7,171 +7,155 @@ import {
   Users,
   Globe,
   FileText,
-  X
+  X,
 } from 'lucide-react';
+
+/* ================= DATA ================= */
 
 const milestones = [
   { year: '1960', event: 'Відкрито середню школу № 167' },
   { year: '1991', event: 'Середня школа № 167 отримала статус гімназії № 167 міста Києва' },
   { year: '2008', event: 'Укладено угоду про партнерство з Бургау-гімназією, м. Дюрен, Німеччина' },
-  { year: '2013', event: 'Гімназію № 167 міста Києва перейменовано у гімназію № 167 міста Києва з поглибленим вивченням німецької мови' },
-  { year: '2014', event: 'Змінено тип закладу освіти на навчально-виховний комплекс № 167 з поглибленим вивченням німецької мови' },
-  { year: '2024', event: 'Зміна типу закладу освіти на Ліцей № 167 Дніпровського району' },
-  { year: '2026', event: 'Рейтинг 4.86 у Google Reviews. 66 років якісної освіти' },
+  { year: '2013', event: 'Гімназію № 167 міста Києва перейменовано...' },
+  { year: '2014', event: 'Змінено тип закладу освіти...' },
+  { year: '2024', event: 'Зміна типу закладу освіти на Ліцей № 167' },
+  { year: '2026', event: 'Рейтинг 4.86 у Google Reviews' },
 ];
 
 const values = [
   {
     icon: <Target className="w-6 h-6" />,
     title: 'Якість освіти',
-    desc: 'Ми прагнемо до найвищих стандартів навчання, поєднуючи класичні методи з сучасними підходами.',
+    desc: 'Поєднуємо класичні методи з сучасними.',
     color: 'text-red-600',
     bg: 'bg-red-50',
   },
   {
     icon: <Heart className="w-6 h-6" />,
     title: 'Повага й підтримка',
-    desc: 'Кожен учень — особистість. Ми створюємо безпечне середовище для розвитку та самовираження.',
+    desc: 'Безпечне середовище для розвитку.',
     color: 'text-amber-600',
     bg: 'bg-amber-50',
   },
   {
     icon: <Lightbulb className="w-6 h-6" />,
     title: 'Інновації',
-    desc: 'Впроваджуємо сучасні технології та методики, щоб освіта була цікавою та ефективною.',
+    desc: 'Сучасні технології в освіті.',
     color: 'text-blue-600',
     bg: 'bg-blue-50',
   },
   {
     icon: <Globe className="w-6 h-6" />,
     title: 'Відкритість світу',
-    desc: 'Мовна освіта відкриває кордони. Ми виховуємо громадян Європи та світу.',
+    desc: 'Міжнародні можливості.',
     color: 'text-green-600',
     bg: 'bg-green-50',
   },
 ];
+
+/* ================= COMPONENT ================= */
 
 export default function About() {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="pt-20">
-
-      {/* Hero */}
+      
+      {/* ================= HERO ================= */}
       <section className="relative py-20 bg-gray-900 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="School building"
+            src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg"
             className="w-full h-full object-cover opacity-15"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-900/70" />
         </div>
 
-        <div className="absolute left-0 top-0 bottom-0 w-1.5 flex flex-col">
-          <div className="flex-1 bg-gray-700" />
-          <div className="flex-1 bg-red-600" />
-          <div className="flex-1 bg-amber-400" />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-400 bg-amber-400/10 border border-amber-400/20 px-3 py-1.5 rounded-full mb-4">
-            Про нас
-          </span>
-
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
+        <div className="relative max-w-7xl mx-auto px-4">
+          <h1 className="text-5xl font-extrabold text-white mb-4">
             Наша <span className="text-red-500">історія</span>
           </h1>
 
-          <p className="text-gray-300 max-w-xl text-lg leading-relaxed mb-8">
-            Понад 55 років ми формуємо майбутнє через освіту, мову та культуру.
-          </p>
-
           <button
             onClick={() => setOpen(true)}
-            className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 active:scale-95 text-white font-semibold px-6 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200"
+            className="bg-red-600 text-white px-6 py-3 rounded-2xl flex gap-2 items-center"
           >
             <FileText className="w-5 h-5" />
-            Інформація про програму ДСД
+            ДСД
           </button>
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">
-                Наша місія
-              </span>
-
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 mb-5">
-                Виховуємо особистостей,<br />відкритих до Європи
-              </h2>
-
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Місія Ліцею №167 — забезпечити якісну загальну середню освіту...
-              </p>
-
-              <ul className="space-y-3">
-                {[
-                  'Академічна досконалість у всіх предметах',
-                  'Вільне володіння німецькою мовою',
-                  'Громадянська відповідальність та патріотизм',
-                  'Готовність до міжкультурного діалогу',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
+      {/* ================= TIMELINE ================= */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          {milestones.map((m, i) => (
+            <div
+              key={m.year}
+              className={`flex ${
+                i % 2 ? 'flex-row-reverse' : ''
+              } mb-6`}
+            >
+              <div className="w-1/2 p-4">
+                <div className="bg-white p-4 rounded-xl shadow">
+                  <b className="text-red-600">{m.year}</b>
+                  <p>{m.event}</p>
+                </div>
+              </div>
             </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.pexels.com/photos/5212695/pexels-photo-5212695.jpeg?auto=compress&cs=tinysrgb&w=600" className="rounded-2xl shadow-md object-cover h-52 w-full" />
-              <img src="https://images.pexels.com/photos/3184398/pexels-photo-3184398.jpeg?auto=compress&cs=tinysrgb&w=600" className="rounded-2xl shadow-md object-cover h-52 w-full mt-8" />
-              <img src="https://images.pexels.com/photos/4145197/pexels-photo-4145197.jpeg?auto=compress&cs=tinysrgb&w=600" className="rounded-2xl shadow-md object-cover h-52 w-full -mt-8" />
-              <img src="https://images.pexels.com/photos/4260323/pexels-photo-4260323.jpeg?auto=compress&cs=tinysrgb&w=600" className="rounded-2xl shadow-md object-cover h-52 w-full" />
-            </div>
-
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* Popup */}
-      {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div onClick={() => setOpen(false)} className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+      {/* ================= VALUES ================= */}
+      <section className="py-20 bg-white">
+        <div className="grid grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {values.map(v => (
+            <div key={v.title} className="p-6 border rounded-2xl text-center">
+              <div className={`w-14 h-14 ${v.bg} ${v.color} mx-auto mb-3 flex items-center justify-center rounded-xl`}>
+                {v.icon}
+              </div>
+              <h3 className="font-bold">{v.title}</h3>
+              <p className="text-sm text-gray-500">{v.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 p-6 max-h-[80vh] overflow-y-auto">
+      {/* ================= TEAM ================= */}
+      <section className="py-20 bg-gray-50 text-center">
+        <Users className="mx-auto text-red-600 w-6 h-6" />
+        <p>50+ педагогів</p>
+      </section>
+
+      {/* ================= POPUP ================= */}
+      {open && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setOpen(false)}
+          />
+
+          <div className="bg-white p-6 rounded-2xl max-w-xl w-full relative">
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-3 right-3 text-gray-400 hover:text-gray-700"
+              className="absolute right-3 top-3"
             >
-              <X className="w-5 h-5" />
+              <X />
             </button>
 
-            <h2 className="text-xl font-bold mb-3">Документ ДСД</h2>
-
-            <p className="text-gray-600 mb-6 leading-relaxed pr-2">
-              (твой текст тут без изменений)
-            </p>
+            <h2 className="font-bold text-lg mb-3">ДСД</h2>
 
             <a
-              href="https://docs.google.com/document/d/e/2PACX-1vR-h9TzRhZWrWu2OkcpD11KRckb8at1GKm3sgzMkvpjcXE2DiihNQuaWdTcx3sX21l_-mrBzpM_cwmN/pub"
+              href="https://docs.google.com/document/d/e/2PACX..."
               target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-medium transition"
+              className="block bg-red-600 text-white text-center py-2 rounded-xl"
             >
-              Відкрити файл
+              Відкрити
             </a>
           </div>
         </div>
       )}
-
     </div>
   );
 }
