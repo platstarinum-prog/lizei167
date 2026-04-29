@@ -106,7 +106,7 @@ export default function Openup() {
           {/* DSD BUTTON */}
           <div className="mb-10 flex justify-center">
             <a
-              href="СЮДА_ВСТАВЬ_ССЫЛКУ_НА_ДОКУМЕНТ"
+              href="https://docs.google.com/document/d/e/2PACX-1vRVbg5IEpGHXPmoFkDDjEcIY9sJ5YTs8JZr4BCIG8TSZ70R4DoYBiOZ9w7vc3_8MxmVeW14R8-EynkN/pub"
               target="_blank"
               rel="noopener noreferrer"
               className="
