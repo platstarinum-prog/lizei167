@@ -224,10 +224,10 @@ export default function Education() {
           </h2>
           <p className="text-gray-600 mb-6">Зателефонуйте нам або заповніть заявку — ми відповімо на всі запитання.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="contacts"
-              className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors shadow-sm"
-            >
+          <a
+  href="/contacts"
+  className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors shadow-sm"
+>
               Зателефонувати
             </a>
           </div>
