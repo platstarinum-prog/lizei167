@@ -81,6 +81,21 @@ const openData = [
     link: 'https://docs.google.com/document/d/e/2PACX-1vSTzwGXt5MUO6zxjRbRjAY7dtcDTfpiKU79MJZkxhZJE6X3F8En3RGAr0jpxUhHXQp6aS8Rav4mJleX/pub',
   },
 
+{
+    title: '14. Умови доступності для осіб з особливими освітніми потребами',
+    link: '2',
+  },
+
+  {
+    title: '15. Перелік додаткових освітніх та інших послуг',
+    link: '3',
+  },
+
+  {
+    title: '16. Правила поведінки здобувача освіти',
+    link: '1',
+  },
+  
   {
     title: '17. Протидія булінгу',
     link: 'https://docs.google.com/document/d/e/2PACX-1vSLvSwAPJ88RiyDVhCaKXI3vndUh3LRQz4AWNmgFohN7WDTviAlP9lRCsOYiB0-2lhYquAp-Y8yoSo3/pub',
