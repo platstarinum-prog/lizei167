@@ -210,16 +210,16 @@ export default function Contacts() {
                 )}
 
               </div>
-                            {/* Соцсети */}
-<div className="flex gap-4 pt-2">
+                    {/* Соцсети */}
+<div className="mt-8 flex gap-6">
 
   <a
     href="https://www.instagram.com/lyceum_167/"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white text-sm font-semibold shadow hover:scale-105 transition"
+    className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white text-base font-semibold shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200"
   >
-    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
       <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 
       5-5V7c0-2.8-2.2-5-5-5H7zm5 5.8A4.2 4.2 0 1 1 7.8 12 
       4.2 4.2 0 0 1 12 7.8zm0 6.9A2.7 2.7 0 1 0 9.3 12 
@@ -233,9 +233,9 @@ export default function Contacts() {
     href="https://www.facebook.com/nvk167"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 text-white text-sm font-semibold shadow hover:bg-blue-700 hover:scale-105 transition"
+    className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-blue-600 text-white text-base font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200"
   >
-    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
       <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.4v-2.9h2.4V9.4
       c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .2 2 .2v2.3h-1.1
       c-1.1 0-1.4.7-1.4 1.4v1.7h2.5l-.4 2.9h-2.1v7A10 
