@@ -224,14 +224,20 @@ export default function Education() {
           </h2>
           <p className="text-gray-600 mb-6">Зателефонуйте нам або заповніть заявку — ми відповімо на всі запитання.</p>
           <div className="flex flex-wrap justify-center gap-4">
-          <a
-  href="/contacts"
-  className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors shadow-sm"
->
+           {/* КНОПКА */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => handleNav('contacts')}
+              className="hidden sm:flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors shadow-sm"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Зателефонувати</span>
+            </button>
               Зателефонувати
             </a>
           </div>
         </div>
+            </div>
       </section>
     </div>
   );
