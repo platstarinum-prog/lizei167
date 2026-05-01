@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Education from './pages/Education';
-import FamilyEducation from './pages/FamilyEducation';
+import FamilyEducation from './pages/family';
 import News from './pages/News';
 import NewsPost from './pages/NewsPost';
 import Reviews from './pages/Reviews';
@@ -49,7 +49,7 @@ function App() {
       case 'home': return <Home navigate={navigate} />;
       case 'about': return <About />;
       case 'education': return <Education />;
-      case 'family': return <FamilyEducation />;
+      case 'family': return <Family />;
       case 'news': return <News onOpen={openNews} />;
       case 'reviews': return <Reviews />;
       case 'contacts': return <Contacts />;
