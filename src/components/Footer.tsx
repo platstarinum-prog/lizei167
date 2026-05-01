@@ -9,6 +9,7 @@ const links: { label: string; page: Page }[] = [
   { label: 'Головна', page: 'home' },
   { label: 'Про нас', page: 'about' },
   { label: 'Навчання', page: 'education' },
+  { label: 'Сімейне навчання', page: 'family' },
   { label: 'Новини', page: 'news' },
   { label: 'Відгуки', page: 'reviews' },
   { label: 'Контакти', page: 'contacts' },
@@ -18,7 +19,6 @@ const links: { label: string; page: Page }[] = [
 export default function Footer({ navigate }: FooterProps) {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      {/* German stripe */}
       <div className="h-1 w-full flex">
         <div className="flex-1 bg-gray-700" />
         <div className="flex-1 bg-red-600" />
@@ -90,8 +90,7 @@ export default function Footer({ navigate }: FooterProps) {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-500">© 2026 Ліцей №167. Всі права захищені.
-          друн</p>
+          <p className="text-xs text-gray-500">© 2026 Ліцей №167. Всі права захищені.</p>
           <p className="text-xs text-gray-500">Заклад загальної середньої освіти м. Києва</p>
         </div>
       </div>
