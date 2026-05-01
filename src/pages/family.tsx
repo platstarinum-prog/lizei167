@@ -17,21 +17,39 @@ const sections = [
     border: 'border-red-100',
     bg: 'bg-red-50',
     color: 'text-red-600',
-    desc: 'Офіційні навчальні плани.',
+    desc: 'Офіційні навчальні плани для сімейної форми навчання.',
     semesters: [
       {
         label: '1 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: `/docs/plan-sem1-${i + 1}.pdf`,
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/plan-sem1-1.pdf' },
+          { cls: '2 клас', href: '/docs/plan-sem1-2.pdf' },
+          { cls: '3 клас', href: '/docs/plan-sem1-3.pdf' },
+          { cls: '4 клас', href: '/docs/plan-sem1-4.pdf' },
+          { cls: '5 клас', href: '/docs/plan-sem1-5.pdf' },
+          { cls: '6 клас', href: '/docs/plan-sem1-6.pdf' },
+          { cls: '7 клас', href: '/docs/plan-sem1-7.pdf' },
+          { cls: '8 клас', href: '/docs/plan-sem1-8.pdf' },
+          { cls: '9 клас', href: '/docs/plan-sem1-9.pdf' },
+          { cls: '10 клас', href: '/docs/plan-sem1-10.pdf' },
+          { cls: '11 клас', href: '/docs/plan-sem1-11.pdf' },
+        ],
       },
       {
         label: '2 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: `/docs/plan-sem2-${i + 1}.pdf`,
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/plan-sem2-1.pdf' },
+          { cls: '2 клас', href: '/docs/plan-sem2-2.pdf' },
+          { cls: '3 клас', href: '/docs/plan-sem2-3.pdf' },
+          { cls: '4 клас', href: '/docs/plan-sem2-4.pdf' },
+          { cls: '5 клас', href: '/docs/plan-sem2-5.pdf' },
+          { cls: '6 клас', href: '/docs/plan-sem2-6.pdf' },
+          { cls: '7 клас', href: '/docs/plan-sem2-7.pdf' },
+          { cls: '8 клас', href: '/docs/plan-sem2-8.pdf' },
+          { cls: '9 клас', href: '/docs/plan-sem2-9.pdf' },
+          { cls: '10 клас', href: '/docs/plan-sem2-10.pdf' },
+          { cls: '11 клас', href: '/docs/plan-sem2-11.pdf' },
+        ],
       },
     ],
   },
@@ -42,21 +60,39 @@ const sections = [
     border: 'border-amber-100',
     bg: 'bg-amber-50',
     color: 'text-amber-600',
-    desc: 'Річне оцінювання учнів.',
+    desc: 'Річне оцінювання учнів на сімейній формі.',
     semesters: [
       {
         label: '1 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: `/docs/att-sem1-${i + 1}.pdf`,
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/att-1-1.pdf' },
+          { cls: '2 клас', href: '/docs/att-1-2.pdf' },
+          { cls: '3 клас', href: '/docs/att-1-3.pdf' },
+          { cls: '4 клас', href: '/docs/att-1-4.pdf' },
+          { cls: '5 клас', href: '/docs/att-1-5.pdf' },
+          { cls: '6 клас', href: '/docs/att-1-6.pdf' },
+          { cls: '7 клас', href: '/docs/att-1-7.pdf' },
+          { cls: '8 клас', href: '/docs/att-1-8.pdf' },
+          { cls: '9 клас', href: '/docs/att-1-9.pdf' },
+          { cls: '10 клас', href: '/docs/att-1-10.pdf' },
+          { cls: '11 клас', href: '/docs/att-1-11.pdf' },
+        ],
       },
       {
         label: '2 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: `/docs/att-sem2-${i + 1}.pdf`,
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/att-2-1.pdf' },
+          { cls: '2 клас', href: '/docs/att-2-2.pdf' },
+          { cls: '3 клас', href: '/docs/att-2-3.pdf' },
+          { cls: '4 клас', href: '/docs/att-2-4.pdf' },
+          { cls: '5 клас', href: '/docs/att-2-5.pdf' },
+          { cls: '6 клас', href: '/docs/att-2-6.pdf' },
+          { cls: '7 клас', href: '/docs/att-2-7.pdf' },
+          { cls: '8 клас', href: '/docs/att-2-8.pdf' },
+          { cls: '9 клас', href: '/docs/att-2-9.pdf' },
+          { cls: '10 клас', href: '/docs/att-2-10.pdf' },
+          { cls: '11 клас', href: '/docs/att-2-11.pdf' },
+        ],
       },
     ],
   },
@@ -67,21 +103,39 @@ const sections = [
     border: 'border-blue-100',
     bg: 'bg-blue-50',
     color: 'text-blue-600',
-    desc: 'Графік консультацій.',
+    desc: 'Графік консультацій для учнів.',
     semesters: [
       {
         label: '1 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: `/docs/cons-sem1-${i + 1}.pdf`,
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/cons-1-1.pdf' },
+          { cls: '2 клас', href: '/docs/cons-1-2.pdf' },
+          { cls: '3 клас', href: '/docs/cons-1-3.pdf' },
+          { cls: '4 клас', href: '/docs/cons-1-4.pdf' },
+          { cls: '5 клас', href: '/docs/cons-1-5.pdf' },
+          { cls: '6 клас', href: '/docs/cons-1-6.pdf' },
+          { cls: '7 клас', href: '/docs/cons-1-7.pdf' },
+          { cls: '8 клас', href: '/docs/cons-1-8.pdf' },
+          { cls: '9 клас', href: '/docs/cons-1-9.pdf' },
+          { cls: '10 клас', href: '/docs/cons-1-10.pdf' },
+          { cls: '11 клас', href: '/docs/cons-1-11.pdf' },
+        ],
       },
       {
         label: '2 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: `/docs/cons-sem2-${i + 1}.pdf`,
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/cons-2-1.pdf' },
+          { cls: '2 клас', href: '/docs/cons-2-2.pdf' },
+          { cls: '3 клас', href: '/docs/cons-2-3.pdf' },
+          { cls: '4 клас', href: '/docs/cons-2-4.pdf' },
+          { cls: '5 клас', href: '/docs/cons-2-5.pdf' },
+          { cls: '6 клас', href: '/docs/cons-2-6.pdf' },
+          { cls: '7 клас', href: '/docs/cons-2-7.pdf' },
+          { cls: '8 клас', href: '/docs/cons-2-8.pdf' },
+          { cls: '9 клас', href: '/docs/cons-2-9.pdf' },
+          { cls: '10 клас', href: '/docs/cons-2-10.pdf' },
+          { cls: '11 клас', href: '/docs/cons-2-11.pdf' },
+        ],
       },
     ],
   },
@@ -93,21 +147,39 @@ const sections = [
     border: 'border-green-100',
     bg: 'bg-green-50',
     color: 'text-green-600',
-    desc: 'Додаткові навчальні ресурси.',
+    desc: 'Додаткові навчальні матеріали.',
     semesters: [
       {
         label: '1 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: `/docs/add-sem1-${i + 1}.pdf`,
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/add-1-1.pdf' },
+          { cls: '2 клас', href: '/docs/add-1-2.pdf' },
+          { cls: '3 клас', href: '/docs/add-1-3.pdf' },
+          { cls: '4 клас', href: '/docs/add-1-4.pdf' },
+          { cls: '5 клас', href: '/docs/add-1-5.pdf' },
+          { cls: '6 клас', href: '/docs/add-1-6.pdf' },
+          { cls: '7 клас', href: '/docs/add-1-7.pdf' },
+          { cls: '8 клас', href: '/docs/add-1-8.pdf' },
+          { cls: '9 клас', href: '/docs/add-1-9.pdf' },
+          { cls: '10 клас', href: '/docs/add-1-10.pdf' },
+          { cls: '11 клас', href: '/docs/add-1-11.pdf' },
+        ],
       },
       {
         label: '2 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: `/docs/add-sem2-${i + 1}.pdf`,
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/add-2-1.pdf' },
+          { cls: '2 клас', href: '/docs/add-2-2.pdf' },
+          { cls: '3 клас', href: '/docs/add-2-3.pdf' },
+          { cls: '4 клас', href: '/docs/add-2-4.pdf' },
+          { cls: '5 клас', href: '/docs/add-2-5.pdf' },
+          { cls: '6 клас', href: '/docs/add-2-6.pdf' },
+          { cls: '7 клас', href: '/docs/add-2-7.pdf' },
+          { cls: '8 клас', href: '/docs/add-2-8.pdf' },
+          { cls: '9 клас', href: '/docs/add-2-9.pdf' },
+          { cls: '10 клас', href: '/docs/add-2-10.pdf' },
+          { cls: '11 клас', href: '/docs/add-2-11.pdf' },
+        ],
       },
     ],
   },
@@ -119,39 +191,34 @@ export default function FamilyEducation() {
   return (
     <div className="pt-20">
 
-      {/* 🔥 HERO (ВОССТАНОВЛЕН ПОЛНОСТЬЮ) */}
+      {/* HERO — НЕ ТРОГАЮ */}
       <section className="relative py-20 bg-gray-900 overflow-hidden">
-
-        {/* ФОН */}
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/4260323/pexels-photo-4260323.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Family"
             className="w-full h-full object-cover opacity-20"
+            alt=""
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-gray-900/70" />
         </div>
 
-        {/* БОКОВАЯ ПОЛОСА (КАК У ТЕБЯ БЫЛО) */}
         <div className="absolute left-0 top-0 bottom-0 w-2 flex flex-col">
           <div className="flex-1 bg-gray-700" />
           <div className="flex-1 bg-red-600" />
           <div className="flex-1 bg-amber-400" />
         </div>
 
-        {/* ТЕКСТ */}
         <div className="relative max-w-7xl mx-auto px-6">
           <h1 className="text-5xl font-extrabold text-white">
             Сімейна форма <span className="text-amber-400">навчання</span>
           </h1>
-          <p className="text-gray-300 mt-3 max-w-xl">
-            Документи, плани та навчальні матеріали
+          <p className="text-gray-300 mt-3">
+            Документи та матеріали
           </p>
         </div>
-
       </section>
 
-      {/* 🔥 ACCORDIONS */}
+      {/* ACCORDION */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-4">
 
@@ -164,17 +231,13 @@ export default function FamilyEducation() {
                 className={`border ${section.border} rounded-2xl overflow-hidden`}
               >
 
-                {/* HEADER */}
                 <button
-                  className="w-full flex items-center justify-between p-6"
-                  onClick={() =>
-                    setOpenSection(openSection === i ? null : i)
-                  }
+                  className="w-full flex justify-between p-6"
+                  onClick={() => setOpenSection(openSection === i ? null : i)}
                 >
 
-                  <div className="flex items-start gap-4">
-
-                    <div className={`w-12 h-12 ${section.bg} ${section.color} rounded-xl flex items-center justify-center`}>
+                  <div className="flex gap-4">
+                    <div className={`w-12 h-12 ${section.bg} ${section.color} flex items-center justify-center rounded-xl`}>
                       <Icon className="w-6 h-6" />
                     </div>
 
@@ -182,18 +245,12 @@ export default function FamilyEducation() {
                       <h3 className="font-bold text-lg">{section.title}</h3>
                       <p className="text-sm text-gray-500">{section.desc}</p>
                     </div>
-
                   </div>
 
-                  <ChevronRight
-                    className={`transition-transform ${
-                      openSection === i ? 'rotate-90' : ''
-                    }`}
-                  />
+                  <ChevronRight className={`transition-transform ${openSection === i ? 'rotate-90' : ''}`} />
 
                 </button>
 
-                {/* CONTENT */}
                 {openSection === i && (
                   <div className={`border-t ${section.border} grid md:grid-cols-2`}>
 
@@ -229,16 +286,6 @@ export default function FamilyEducation() {
           })}
 
         </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-gray-50 text-center">
-        <a
-          href="tel:+380000000000"
-          className="bg-red-600 text-white px-6 py-3 rounded-xl"
-        >
-          Зателефонувати
-        </a>
       </section>
 
     </div>
