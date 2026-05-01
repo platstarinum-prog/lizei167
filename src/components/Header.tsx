@@ -12,6 +12,7 @@ const navLinks: { label: string; page: Page }[] = [
   { label: 'Головна', page: 'home' },
   { label: 'Про нас', page: 'about' },
   { label: 'Навчання', page: 'education' },
+  { label: 'Сімейне навчання', page: 'family' },
   { label: 'Новини', page: 'news' },
   { label: 'Відгуки', page: 'reviews' },
   { label: 'Відкритість', page: 'openup' },
