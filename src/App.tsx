@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Education from './pages/Education';
-import FamilyEducation from './pages/family';
+import family from './pages/family';
 import News from './pages/News';
 import NewsPost from './pages/NewsPost';
 import Reviews from './pages/Reviews';
