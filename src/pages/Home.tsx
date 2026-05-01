@@ -40,10 +40,10 @@ const advantages = [
 ];
 
 const stats = [
-  { value: '55+', label: 'Років досвіду' },
-  { value: '1200+', label: 'Учнів' },
+  { value: '60+', label: 'Років досвіду' },
+  { value: '700+', label: 'Учнів' },
   { value: '4.86', label: 'Рейтинг Google' },
-  { value: '95%', label: 'Вступають до вишів' },
+  { value: '100%', label: 'Вступають до вишів' },
 ];
 
 export default function Home({ navigate }: HomeProps) {
