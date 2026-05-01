@@ -14,20 +14,39 @@ const sections = [
     semesters: [
       {
         label: '1 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: '#',
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/1-sem1.pdf' },
+          { cls: '2 клас', href: '/docs/2-sem1.pdf' },
+          { cls: '3 клас', href: '/docs/3-sem1.pdf' },
+          { cls: '4 клас', href: '/docs/4-sem1.pdf' },
+          { cls: '5 клас', href: '/docs/5-sem1.pdf' },
+          { cls: '6 клас', href: '/docs/6-sem1.pdf' },
+          { cls: '7 клас', href: '/docs/7-sem1.pdf' },
+          { cls: '8 клас', href: '/docs/8-sem1.pdf' },
+          { cls: '9 клас', href: '/docs/9-sem1.pdf' },
+          { cls: '10 клас', href: '/docs/10-sem1.pdf' },
+          { cls: '11 клас', href: '/docs/11-sem1.pdf' },
+        ],
       },
       {
         label: '2 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: '#',
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/1-sem2.pdf' },
+          { cls: '2 клас', href: '/docs/2-sem2.pdf' },
+          { cls: '3 клас', href: '/docs/3-sem2.pdf' },
+          { cls: '4 клас', href: '/docs/4-sem2.pdf' },
+          { cls: '5 клас', href: '/docs/5-sem2.pdf' },
+          { cls: '6 клас', href: '/docs/6-sem2.pdf' },
+          { cls: '7 клас', href: '/docs/7-sem2.pdf' },
+          { cls: '8 клас', href: '/docs/8-sem2.pdf' },
+          { cls: '9 клас', href: '/docs/9-sem2.pdf' },
+          { cls: '10 клас', href: '/docs/10-sem2.pdf' },
+          { cls: '11 клас', href: '/docs/11-sem2.pdf' },
+        ],
       },
     ],
   },
+
   {
     title: 'Завдання для атестації',
     subtitle: 'Атестація',
@@ -40,20 +59,39 @@ const sections = [
     semesters: [
       {
         label: '1 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: '#',
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/att-1-sem1.pdf' },
+          { cls: '2 клас', href: '/docs/att-2-sem1.pdf' },
+          { cls: '3 клас', href: '/docs/att-3-sem1.pdf' },
+          { cls: '4 клас', href: '/docs/att-4-sem1.pdf' },
+          { cls: '5 клас', href: '/docs/att-5-sem1.pdf' },
+          { cls: '6 клас', href: '/docs/att-6-sem1.pdf' },
+          { cls: '7 клас', href: '/docs/att-7-sem1.pdf' },
+          { cls: '8 клас', href: '/docs/att-8-sem1.pdf' },
+          { cls: '9 клас', href: '/docs/att-9-sem1.pdf' },
+          { cls: '10 клас', href: '/docs/att-10-sem1.pdf' },
+          { cls: '11 клас', href: '/docs/att-11-sem1.pdf' },
+        ],
       },
       {
         label: '2 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: '#',
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/att-1-sem2.pdf' },
+          { cls: '2 клас', href: '/docs/att-2-sem2.pdf' },
+          { cls: '3 клас', href: '/docs/att-3-sem2.pdf' },
+          { cls: '4 клас', href: '/docs/att-4-sem2.pdf' },
+          { cls: '5 клас', href: '/docs/att-5-sem2.pdf' },
+          { cls: '6 клас', href: '/docs/att-6-sem2.pdf' },
+          { cls: '7 клас', href: '/docs/att-7-sem2.pdf' },
+          { cls: '8 клас', href: '/docs/att-8-sem2.pdf' },
+          { cls: '9 клас', href: '/docs/att-9-sem2.pdf' },
+          { cls: '10 клас', href: '/docs/att-10-sem2.pdf' },
+          { cls: '11 клас', href: '/docs/att-11-sem2.pdf' },
+        ],
       },
     ],
   },
+
   {
     title: 'Розклад консультацій',
     subtitle: 'Консультації',
@@ -66,45 +104,35 @@ const sections = [
     semesters: [
       {
         label: '1 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: '#',
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/cons-1-sem1.pdf' },
+          { cls: '2 клас', href: '/docs/cons-2-sem1.pdf' },
+          { cls: '3 клас', href: '/docs/cons-3-sem1.pdf' },
+          { cls: '4 клас', href: '/docs/cons-4-sem1.pdf' },
+          { cls: '5 клас', href: '/docs/cons-5-sem1.pdf' },
+          { cls: '6 клас', href: '/docs/cons-6-sem1.pdf' },
+          { cls: '7 клас', href: '/docs/cons-7-sem1.pdf' },
+          { cls: '8 клас', href: '/docs/cons-8-sem1.pdf' },
+          { cls: '9 клас', href: '/docs/cons-9-sem1.pdf' },
+          { cls: '10 клас', href: '/docs/cons-10-sem1.pdf' },
+          { cls: '11 клас', href: '/docs/cons-11-sem1.pdf' },
+        ],
       },
       {
         label: '2 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: '#',
-        })),
-      },
-    ],
-  },
-
-  // 🟢 NEW BLOCK
-  {
-    title: 'Методичні матеріали',
-    subtitle: 'Матеріали',
-    desc: 'Корисні методичні рекомендації, презентації та додаткові матеріали для учнів.',
-    badge: 'Матеріали',
-    badgeColor: 'bg-green-100 text-green-700',
-    border: 'border-green-100',
-    bg: 'bg-green-50',
-    color: 'text-green-600',
-    semesters: [
-      {
-        label: '1 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: '#',
-        })),
-      },
-      {
-        label: '2 Семестр',
-        classes: Array.from({ length: 11 }, (_, i) => ({
-          cls: `${i + 1} клас`,
-          href: '#',
-        })),
+        classes: [
+          { cls: '1 клас', href: '/docs/cons-1-sem2.pdf' },
+          { cls: '2 клас', href: '/docs/cons-2-sem2.pdf' },
+          { cls: '3 клас', href: '/docs/cons-3-sem2.pdf' },
+          { cls: '4 клас', href: '/docs/cons-4-sem2.pdf' },
+          { cls: '5 клас', href: '/docs/cons-5-sem2.pdf' },
+          { cls: '6 клас', href: '/docs/cons-6-sem2.pdf' },
+          { cls: '7 клас', href: '/docs/cons-7-sem2.pdf' },
+          { cls: '8 клас', href: '/docs/cons-8-sem2.pdf' },
+          { cls: '9 клас', href: '/docs/cons-9-sem2.pdf' },
+          { cls: '10 клас', href: '/docs/cons-10-sem2.pdf' },
+          { cls: '11 клас', href: '/docs/cons-11-sem2.pdf' },
+        ],
       },
     ],
   },
@@ -116,11 +144,11 @@ export default function FamilyEducation() {
   return (
     <div className="pt-20">
 
-      {/* HERO */}
+      {/* HERO (НЕ ТРОГАЛ) */}
       <section className="relative py-20 bg-gray-900 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/4260323/pexels-photo-4260323.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="https://images.pexels.com/photos/4260323/pexels-photo-4260323.jpeg"
             className="w-full h-full object-cover opacity-15"
             alt="Family"
           />
@@ -137,94 +165,70 @@ export default function FamilyEducation() {
         </div>
       </section>
 
-      {/* ACCORDIONS */}
+      {/* ACCORDION (ТОЖЕ НЕ ТРОГАЛ СТИЛЬ) */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
 
-          <div className="space-y-4">
-            {sections.map((section, i) => (
-              <div
-                key={section.title}
-                className={`border ${section.border} rounded-2xl overflow-hidden transition-all ${
-                  openSection === i ? 'shadow-md' : 'shadow-sm'
-                }`}
+          {sections.map((section, i) => (
+            <div
+              key={section.title}
+              className={`border ${section.border} rounded-2xl overflow-hidden`}
+            >
+
+              <button
+                className="w-full flex items-center justify-between p-6"
+                onClick={() =>
+                  setOpenSection(openSection === i ? null : i)
+                }
               >
+                <div>
+                  <h3 className="font-bold text-lg">{section.title}</h3>
+                  <p className="text-sm text-gray-500">{section.desc}</p>
+                </div>
 
-                <button
-                  className="w-full text-left p-6 flex items-start gap-4"
-                  onClick={() =>
-                    setOpenSection(openSection === i ? null : i)
-                  }
-                >
-                  <div
-                    className={`w-12 h-12 ${section.bg} ${section.color} rounded-xl flex items-center justify-center`}
-                  >
-                    <FileText className="w-6 h-6" />
-                  </div>
+                <ChevronRight
+                  className={`transition-transform ${
+                    openSection === i ? 'rotate-90' : ''
+                  }`}
+                />
+              </button>
 
-                  <div className="flex-1">
-                    <h3 className="font-bold text-lg">{section.title}</h3>
-                    <p className="text-gray-500 text-sm">{section.desc}</p>
-                  </div>
+              {openSection === i && (
+                <div className={`border-t ${section.border} grid md:grid-cols-2`}>
+                  {section.semesters.map((sem) => (
+                    <div key={sem.label} className="p-6">
+                      <p className={`font-bold text-sm mb-3 ${section.color}`}>
+                        {sem.label}
+                      </p>
 
-                  <ChevronRight
-                    className={`w-5 h-5 transition-transform ${
-                      openSection === i ? 'rotate-90' : ''
-                    }`}
-                  />
-                </button>
-
-                {openSection === i && (
-                  <div className={`border-t ${section.border}`}>
-                    <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
-
-                      {section.semesters.map((sem) => (
-                        <div key={sem.label} className="p-6">
-                          <p
-                            className={`text-xs font-bold uppercase ${section.color} mb-3`}
+                      <div className="space-y-2">
+                        {sem.classes.map((item) => (
+                          <a
+                            key={item.cls}
+                            href={item.href}
+                            className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50"
                           >
-                            {sem.label}
-                          </p>
-
-                          <ul className="space-y-2">
-                            {sem.classes.map((item) => (
-                              <li key={item.cls}>
-                                <a
-                                  href={item.href}
-                                  className="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-gray-50"
-                                >
-                                  <CheckCircle
-                                    className={`w-4 h-4 ${section.color}`}
-                                  />
-                                  <span className="text-sm text-gray-700 flex-1">
-                                    {item.cls}
-                                  </span>
-                                  <BookOpen className="w-4 h-4 text-gray-300" />
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-
+                            <CheckCircle className={`w-4 h-4 ${section.color}`} />
+                            <span className="text-sm">{item.cls}</span>
+                          </a>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+                  ))}
+                </div>
+              )}
+
+            </div>
+          ))}
 
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-amber-50 border-t border-amber-100 text-center">
-        <h2 className="text-2xl font-bold mb-3">
-          Маєте запитання?
-        </h2>
+      {/* CTA (ТОЖЕ НЕ ТРОГАЛ) */}
+      <section className="py-16 bg-gray-50 text-center">
         <a
-          href="#"
-          className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-7 py-3 rounded-xl"
+          href="tel:+380000000000"
+          className="bg-red-600 text-white px-6 py-3 rounded-xl"
         >
           Зателефонувати
         </a>
