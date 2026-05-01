@@ -4,13 +4,14 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Education from './pages/Education';
+import FamilyEducation from './pages/FamilyEducation';
 import News from './pages/News';
 import NewsPost from './pages/NewsPost';
 import Reviews from './pages/Reviews';
 import Contacts from './pages/Contacts';
 import Openup from './pages/openup';
 
-export type Page = 'home' | 'about' | 'education' | 'news' | 'reviews' | 'contacts' | 'openup';
+export type Page = 'home' | 'about' | 'education' | 'family' | 'news' | 'reviews' | 'contacts' | 'openup';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -48,6 +49,7 @@ function App() {
       case 'home': return <Home navigate={navigate} />;
       case 'about': return <About />;
       case 'education': return <Education />;
+      case 'family': return <FamilyEducation />;
       case 'news': return <News onOpen={openNews} />;
       case 'reviews': return <Reviews />;
       case 'contacts': return <Contacts />;
