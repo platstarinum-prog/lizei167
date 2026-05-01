@@ -86,27 +86,27 @@ const sections = [
     ],
   },
 
-  // 🔥 4-Й АККОРДЕОН (НОВЫЙ)
+  // 🔥 4-Й АККОРДЕОН
   {
     title: 'Додаткові матеріали',
     icon: Users,
     border: 'border-green-100',
     bg: 'bg-green-50',
     color: 'text-green-600',
-    desc: 'Додаткові навчальні ресурси та файли.',
+    desc: 'Додаткові навчальні ресурси.',
     semesters: [
       {
         label: '1 Семестр',
         classes: Array.from({ length: 11 }, (_, i) => ({
           cls: `${i + 1} клас`,
-          href: `/docs/additional-sem1-${i + 1}.pdf`,
+          href: `/docs/add-sem1-${i + 1}.pdf`,
         })),
       },
       {
         label: '2 Семестр',
         classes: Array.from({ length: 11 }, (_, i) => ({
           cls: `${i + 1} клас`,
-          href: `/docs/additional-sem2-${i + 1}.pdf`,
+          href: `/docs/add-sem2-${i + 1}.pdf`,
         })),
       },
     ],
@@ -119,20 +119,39 @@ export default function FamilyEducation() {
   return (
     <div className="pt-20">
 
-      {/* HERO */}
+      {/* 🔥 HERO (ВОССТАНОВЛЕН ПОЛНОСТЬЮ) */}
       <section className="relative py-20 bg-gray-900 overflow-hidden">
-        <div className="absolute inset-0" />
+
+        {/* ФОН */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/4260323/pexels-photo-4260323.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Family"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-gray-900/70" />
+        </div>
+
+        {/* БОКОВАЯ ПОЛОСА (КАК У ТЕБЯ БЫЛО) */}
+        <div className="absolute left-0 top-0 bottom-0 w-2 flex flex-col">
+          <div className="flex-1 bg-gray-700" />
+          <div className="flex-1 bg-red-600" />
+          <div className="flex-1 bg-amber-400" />
+        </div>
+
+        {/* ТЕКСТ */}
         <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-5xl font-bold text-white">
-            Сімейне навчання
+          <h1 className="text-5xl font-extrabold text-white">
+            Сімейна форма <span className="text-amber-400">навчання</span>
           </h1>
-          <p className="text-gray-300 mt-3">
-            Документи та навчальні матеріали
+          <p className="text-gray-300 mt-3 max-w-xl">
+            Документи, плани та навчальні матеріали
           </p>
         </div>
+
       </section>
 
-      {/* ACCORDIONS */}
+      {/* 🔥 ACCORDIONS */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-4">
 
@@ -152,7 +171,9 @@ export default function FamilyEducation() {
                     setOpenSection(openSection === i ? null : i)
                   }
                 >
+
                   <div className="flex items-start gap-4">
+
                     <div className={`w-12 h-12 ${section.bg} ${section.color} rounded-xl flex items-center justify-center`}>
                       <Icon className="w-6 h-6" />
                     </div>
@@ -161,6 +182,7 @@ export default function FamilyEducation() {
                       <h3 className="font-bold text-lg">{section.title}</h3>
                       <p className="text-sm text-gray-500">{section.desc}</p>
                     </div>
+
                   </div>
 
                   <ChevronRight
@@ -168,6 +190,7 @@ export default function FamilyEducation() {
                       openSection === i ? 'rotate-90' : ''
                     }`}
                   />
+
                 </button>
 
                 {/* CONTENT */}
