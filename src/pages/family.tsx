@@ -185,14 +185,13 @@ export default function FamilyEducation() {
           </div>
 
           <div className="space-y-4">
-            {sections.map(({ title, subtitle, desc, badge, badgeColor, border, bg, color, semesters }, i) => (
+            {sections.map(({ title, desc, badge, badgeColor, border, bg, color, semesters }, i) => (
               <div
                 key={title}
                 className={`border ${border} rounded-2xl overflow-hidden transition-all duration-300 ${
                   openSection === i ? 'shadow-md' : 'shadow-sm hover:shadow-md'
                 }`}
               >
-                {/* Header button */}
                 <button
                   className="w-full text-left p-6 flex items-start gap-4"
                   onClick={() => setOpenSection(openSection === i ? null : i)}
@@ -216,19 +215,16 @@ export default function FamilyEducation() {
                   />
                 </button>
 
-                {/* Expanded table */}
                 {openSection === i && (
                   <div className={`border-t ${border}`}>
                     <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
                       {semesters.map((sem) => (
                         <div key={sem.label} className="p-6">
-                          {/* Semester label */}
                           <div className="mb-4">
                             <span className={`text-xs font-bold uppercase tracking-widest ${color}`}>
                               {sem.label}
                             </span>
                           </div>
-                          {/* Class links */}
                           <ul className="space-y-2">
                             {sem.classes.map(({ cls, href }) => (
                               <li key={cls}>
