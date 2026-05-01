@@ -103,10 +103,12 @@ export default function Contacts() {
                   <div>
                     <p className="font-semibold text-sm">Телефон</p>
                     <a
-                      href="tel:+380442923133"
+                      href=""
                       className="text-red-600 font-semibold hover:underline"
                     >
-                      +380 44 292 3133
+                     +063 319 77 90 - Секретар
+                      +063 319 77 53 - Вахта
+                      +063 319 77 96 - Початкова школа
                     </a>
                   </div>
                 </div>
@@ -119,10 +121,10 @@ export default function Contacts() {
                   <div>
                     <p className="font-semibold text-sm">Email</p>
                     <a
-                      href="mailto:lyceum167@ukr.net"
+                      href=""
                       className="text-red-600 font-semibold hover:underline text-sm"
                     >
-                      lyceum167@ukr.net
+                      lyzeum167@ukr.net
                     </a>
                   </div>
                 </div>
@@ -134,7 +136,7 @@ export default function Contacts() {
                   </div>
                   <div>
                     <p className="font-semibold text-sm">Графік роботи</p>
-                    <p className="text-sm text-gray-600">Пн–Пт: 08:00</p>
+                    <p className="text-sm text-gray-600">Пн–Пт: 08:00 - 18:00</p>
                     <p className="text-sm text-gray-600">Сб–Нд: вихідні</p>
                   </div>
                 </div>
