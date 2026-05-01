@@ -94,25 +94,30 @@ export default function Contacts() {
                     </p>
                   </div>
                 </div>
+{/* Телефон */}
+<div className="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
+  <div className="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center">
+    <Phone className="w-5 h-5" />
+  </div>
 
-                {/* Телефон */}
-                <div className="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
-                  <div className="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-sm">Телефон</p>
-                    <a
-                      href=""
-                      className="text-red-600 font-semibold hover:underline"
-                    >
-                     +063 319 77 90 - Секретар
-                      +063 319 77 53 - Вахта
-                      +063 319 77 96 - Початкова школа
-                    </a>
-                  </div>
-                </div>
+  <div>
+    <p className="font-semibold text-sm mb-2">Телефон</p>
 
+    <div className="text-red-600 font-semibold space-y-1">
+      <a href="tel:+380633197790" className="block hover:underline">
+        +063 319 77 90 — Секретар
+      </a>
+
+      <a href="tel:+380633197753" className="block hover:underline">
+        +063 319 77 53 — Вахта
+      </a>
+
+      <a href="tel:+380633197796" className="block hover:underline">
+        +063 319 77 96 — Початкова школа
+      </a>
+    </div>
+  </div>
+</div>
                 {/* Email */}
                 <div className="flex items-start gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
                   <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">
