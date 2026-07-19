@@ -123,7 +123,7 @@ export default function Footer({ navigate }: FooterProps) {
               <div className="absolute top-1/4 left-1/3 w-8 h-8 bg-rose-200/30 rounded-full blur-md" />
             </div>
               <a
-                href="https://krvtsv.netlify.app"
+                href="https://krvtsvcorp.pp.ua"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative block text-center text-rose-600 font-bold text-[11px] md:text-[10px] uppercase tracking-widest whitespace-nowrap hover:text-rose-500 hover:scale-105 transition-all duration-200"
